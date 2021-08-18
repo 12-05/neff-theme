@@ -3,7 +3,7 @@
     <div class="template">
         <div class="bild" style="background-image:url(<?php the_field('bild');?>)"></div>
         <div class="content">
-            <span class="subline"><?php the_field('datum');?> | <?php the_field('typ');?></span>
+            <span class="subline"><?php echo NEFF_EventModel::format_date(get_field('datum'));?> | <?php the_field('typ');?></span>
             <h1 class="headline"><?php the_title();?></h1>
             <div class="text">
                 <?php the_field('beschreibung');?>
