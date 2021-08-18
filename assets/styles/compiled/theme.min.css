@@ -37,7 +37,7 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .block-slider .slick-dots li button{-webkit-transition:all .3s ease;transition:all .3s ease;margin:0 12.5px;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;background:var(--main);font-size:0;height:5px;width:25px}
 .block-slider .slide{overflow:hidden;height:50vh;background-size:cover;background-position:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .block-slider .slide:after{position:absolute;height:100%;width:100%;content:"";z-index:0;background:rgba(0,0,0,0.05)}
-.block-slider .slide .content{position:relative;z-index:1;text-align:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.block-slider .slide .content{padding:2rem;position:relative;z-index:1;text-align:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .block-slider .slide .content img{max-width:400px}
 .block-slider .slide .content .headline{display:block;font-size:80px;color:#fff;font-weight:normal}
 .block-block{display:grid;grid-template-columns:1fr 1fr}
@@ -72,15 +72,15 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .block-grid .content .link:hover{-webkit-transform:scale(1.5);transform:scale(1.5)}
 .block-ansprechpartner{background:#f7f5f5;padding:100px 10vw}
 .block-ansprechpartner h2{color:var(--main);text-transform:uppercase;font-size:50px;line-height:1;font-weight:300;font-weight:normal}
-.block-ansprechpartner .grid{display:grid;grid-template-columns:repeat(6,1fr);margin-top:50px;grid-gap:1rem}
+.block-ansprechpartner .grid{display:grid;grid-template-columns:repeat(5,1fr);margin-top:50px;grid-gap:50px}
 .block-ansprechpartner .grid .item{text-decoration:none;color:var(--secondary);-webkit-transition:all .3s ease;transition:all .3s ease}
 .block-ansprechpartner .grid .item:hover{-webkit-transition:all .3s ease;transition:all .3s ease}
 .block-ansprechpartner .grid .item:hover{-webkit-transform:scale(1.05);transform:scale(1.05)}
 .block-ansprechpartner .grid .item .profilbild{padding-bottom:100%;background-size:cover;background-position:center;-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.2);box-shadow:0 5px 5px rgba(0,0,0,0.2)}
 .block-ansprechpartner .grid .item .content{margin-top:3rem}
-.block-ansprechpartner .grid .item .content .unternehmen{font-size:20px;color:var(--secondary)}
+.block-ansprechpartner .grid .item .content .unternehmen{font-size:20px;color:var(--secondary);opacity:.5}
 .block-ansprechpartner .grid .item .content .name{margin-top:1rem;color:var(--secondary);font-size:40px;font-weight:normal;line-height:44px}
-.block-ansprechpartner .grid .item .content .position{margin-top:1rem}
+.block-ansprechpartner .grid .item .content .position{margin-top:.5rem}
 .block-text{padding:100px 10vw}
 .block-text .subline{color:var(--secondary);font-size:24px;text-transform:uppercase}
 .block-text .headline{line-height:1.3;margin:0;font-weight:normal;color:var(--secondary);font-size:50px;line-height:1;font-weight:300}
@@ -180,52 +180,62 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .header .hamburger-container .hamburger-icon,.header .hamburger-container .hamburger-icon:before,.header .hamburger-container .hamburger-icon:after{width:30px;height:3px}
 .header .hamburger-container .hamburger-icon:before{top:-8px}
 .header .hamburger-container .hamburger-icon:after{top:8px}
-.header .menu-wrapper{width:100vw}
+.header .menu-wrapper{width:100vw;padding-top:50px}
+.header .menu-wrapper .logo{bottom:2rem}
+.header .menu-wrapper ul li{margin-bottom:25px}
 footer{padding:50px 5vw}
 footer{display:block}
-footer .copyright{text-align:center}
+footer .copyright{text-align:center;margin-bottom:1rem}
 footer .footer-menu ul{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .block-slider .slide .content img{max-width:50%}
 .block-slider .slide .content .headline{font-size:32px}
 .block-block .content{padding:50px 5vw}
+.block-block .content .headline{font-size:28px;line-height:32px}
 .block-block{grid-template-columns:1fr}
 .block-block .image{min-height:25vh}
 .block-block.align-image_right .content{grid-column:1;grid-row:2}
-.block-intro .content .headline{font-size:28px}
+.block-intro .content .headline{font-size:28px;line-height:34px}
 .block-intro .content .text{font-size:20px}
 .block-intro{grid-template-columns:1fr}
 .block-grid{padding:50px 5vw}
 .block-grid{grid-template-columns:1fr}
 .block-ansprechpartner{padding:50px 5vw}
-.block-ansprechpartner h2{font-size:28px}
+.block-ansprechpartner h2{font-size:28px;line-height:34px}
 .block-ansprechpartner .grid{grid-template-columns:1fr}
+.block-ansprechpartner .grid .item{margin-bottom:2rem}
+.block-ansprechpartner .grid .item .content .unternehmen{font-size:16px}
+.block-ansprechpartner .grid .item .content .name{margin-top:.5rem;font-size:24px}
 .block-text{padding:50px 5vw}
-.block-text .headline{font-size:28px}
+.block-text .headline{font-size:28px;line-height:34px}
 .block-projektloop{padding:50px 5vw}
 .block-projektloop{grid-template-columns:repeat(1,1fr)}
+.block-projektloop .projekt .headline{font-size:28px;line-height:32px}
 .block-eventloop{padding:50px 5vw}
 .block-eventloop{grid-template-columns:repeat(1,1fr)}
+.block-eventloop .event .headline{font-size:28px;line-height:32px}
 .single-projekt .template{position:absolute;grid-template-columns:1fr}
 .single-projekt .template .bild{height:33vh}
 .single-projekt .template .content{padding:50px 5vw}
-.single-projekt .template .content .headline{font-size:28px}
+.single-projekt .template .content .headline{font-size:28px;line-height:34px}
 .single-projekt .template .content .row .label{width:auto}
 .single-ansprechpartner .template{position:absolute;grid-template-columns:1fr}
 .single-ansprechpartner .template .profil{padding:5vw}
-.single-ansprechpartner .template .profil .name{font-size:28px}
+.single-ansprechpartner .template .profil .name{font-size:28px;line-height:34px}
 .single-ansprechpartner .template .content{padding:50px 5vw}
-.single-ansprechpartner .template .content .headline{font-size:28px}
+.single-ansprechpartner .template .content .headline{font-size:28px;line-height:34px}
 .single-event .template{position:absolute;grid-template-columns:1fr}
 .single-event .template .bild{height:33vh}
 .single-event .template .content{padding:50px 5vw}
-.single-event .template .content .headline{font-size:28px}
+.single-event .template .content .headline{font-size:28px;line-height:34px}
 .single-event .template .content .info{position:static;grid-template-columns:1fr}
 .single-event .template .content .row .label{width:auto}
 .single-event .template .register{grid-column-start:auto;grid-column-end:auto}
 .single-event .template .register{padding:50px 5vw}
-.single-event .template .register .headline{font-size:28px}
+.single-event .template .register .headline{font-size:28px;line-height:34px}
 .single-event .template .register form{position:static;grid-template-columns:1fr}
 .block-eventslider{padding:50px 5vw}
+.block-eventslider .event .headline{font-size:28px;line-height:32px}
 .block-kontaktformular{padding:50px 5vw}
-.block-kontaktformular .headline{font-size:28px}
+.block-kontaktformular .headline{font-size:28px;line-height:34px}
+.block-kontaktformular .grid{grid-template-columns:1fr}
 }
