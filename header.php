@@ -1,5 +1,11 @@
 <html>
     <head>
+        <style>
+            :root {
+                --main: <?php the_field('color-main','option');?>;
+                --secondary: <?php the_field('color-secondary','option');?>;
+            }
+        </style>
         <?php wp_head();?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
