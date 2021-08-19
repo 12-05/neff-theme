@@ -10,6 +10,12 @@
                     <?php echo $slide['headline'];?>
                 </span>
             </div>
+            <?php if($slide['content']) {?>
+                <div class="info">
+                    <?php _e($slide['content']);?>
+                </div>
+            <?php } ?>
+ 
         </div>
     <?php endforeach;endif;?>
 </section>

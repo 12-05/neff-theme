@@ -3,7 +3,20 @@
         public function __construct() {
             add_filter('block_categories_all', array($this, 'add_block_category'));
             add_action('acf/init', array($this, 'register_blocks'));
+            add_filter('allowed_block_types', array($this, 'remove_default_blocks'));
 
+        }
+
+        public function remove_default_blocks($allowed_blocks) {
+                $registered_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
+                $registered_blocks = array_keys($registered_blocks);
+                $return = array();
+                foreach($registered_blocks as $block) {
+                    if(strpos($block, 'acf') > -1) {
+                        $return[] = $block;
+                    }
+                }
+                return $return;
         }
         
         public function add_block_category($block_categories) {
@@ -50,7 +63,7 @@
                 'render_template'   => '/blocks/intro.php',
                 'category'          => 'neff-blocks',
                 'align' => 'full',
-                'icon'              => 'align-none',
+                'icon'              => 'text-page',
             ));
 
             acf_register_block_type(array(
@@ -59,7 +72,7 @@
                 'render_template'   => '/blocks/grid.php',
                 'category'          => 'neff-blocks',
                 'align' => 'full',
-                'icon'              => 'align-none',
+                'icon'              => 'table-row-after',
             ));
 
              acf_register_block_type(array(
@@ -68,7 +81,7 @@
                 'render_template'   => '/blocks/ansprechpartner.php',
                 'category'          => 'neff-blocks',
                 'align' => 'full',
-                'icon'              => 'align-none',
+                'icon'              => 'id',
             ));
 
             acf_register_block_type(array(
@@ -77,7 +90,7 @@
                 'render_template'   => '/blocks/text.php',
                 'category'          => 'neff-blocks',
                 'align' => 'full',
-                'icon'              => 'align-none',
+                'icon'              => 'editor-alignleft',
             ));
 
             acf_register_block_type(array(
@@ -86,7 +99,7 @@
                 'render_template'   => '/blocks/bild.php',
                 'category'          => 'neff-blocks',
                 'align' => 'full',
-                'icon'              => 'align-none',
+                'icon'              => 'format-image',
             ));
 
              acf_register_block_type(array(
@@ -95,7 +108,7 @@
                 'render_template'   => '/blocks/projektloop.php',
                 'category'          => 'neff-blocks',
                 'align' => 'full',
-                'icon'              => 'align-none',
+                'icon'              => 'images-alt2',
             ));
 
             acf_register_block_type(array(
@@ -104,7 +117,7 @@
                 'render_template'   => '/blocks/eventloop.php',
                 'category'          => 'neff-blocks',
                 'align' => 'full',
-                'icon'              => 'align-none',
+                'icon'              => 'calendar-alt',
             ));         
             
             acf_register_block_type(array(
@@ -113,7 +126,7 @@
                 'render_template'   => '/blocks/eventslider.php',
                 'category'          => 'neff-blocks',
                 'align' => 'full',
-                'icon'              => 'align-none',
+                'icon'              => 'calendar',
             ));    
             acf_register_block_type(array(
                 'name'              => 'kontaktformular',

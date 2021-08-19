@@ -1,7 +1,9 @@
 <?php 
     get_header();?>
     <div class="fullscreen">
-        <img class="close" onClick="window.history.back()" src="<?php echo get_stylesheet_directory_uri().'/assets/images/close.svg';?>" />
+       <button onClick="window.history.back()" class="close">
+            <?php include get_template_directory().'/assets/images/close.php';?>
+        </button>
     <?php the_content();?>
 </div>
 

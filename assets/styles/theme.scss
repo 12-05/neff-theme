@@ -287,6 +287,7 @@ footer {
 		}
 	}
 	.slide {
+		position: relative;
 		overflow: hidden;
 		height: 50vh;
 		background-size: cover;
@@ -325,6 +326,28 @@ footer {
 				@media (max-width: $mobile) {
 					font-size: 32px;
 				}
+			}
+		}
+		.info {
+			color: #fff;
+			background: rgba(0, 0, 0, 0.2);
+			position: absolute;
+			bottom: 0;
+			right: 10vw;
+			padding: 2vh 2vw;
+			z-index: 99;
+			@media (max-width: $mobile) {
+			}
+			p {
+				margin: 0;
+			}
+			a {
+				color: #fff;
+			}
+			h1,
+			h2,
+			h3 {
+				margin: 0;
 			}
 		}
 	}
@@ -705,6 +728,8 @@ footer {
 .single-projekt .template {
 	background: #f7f5f5;
 	position: fixed;
+	z-index: 500;
+
 	min-height: 100%;
 	width: 100%;
 	top: 0;
@@ -764,6 +789,8 @@ footer {
 	width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 500;
+
 	overflow-y: scroll;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
@@ -833,6 +860,7 @@ footer {
 	width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 500;
 	overflow-y: scroll;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
@@ -871,6 +899,18 @@ footer {
 			@media (max-width: $mobile) {
 				position: static;
 				grid-template-columns: 1fr;
+			}
+		}
+		.link {
+			margin-top: 2rem;
+			a {
+				background: $red;
+				color: #fff;
+				padding: 1rem;
+				text-decoration: none;
+				&:hover {
+					background: $grey;
+				}
 			}
 		}
 		.row {
@@ -1079,6 +1119,21 @@ footer {
 .single-event,
 .single-projekt,
 .single-ansprechpartner {
+	.close {
+		position: fixed;
+		top: 100px;
+		right: 70px;
+		height: 70px;
+		width: 70px;
+		display: block;
+		appearance: none;
+		background: transparent;
+		border: 0px;
+		img {
+			height: 70px;
+			width: 70px;
+		}
+	}
 	header .logo {
 		visibility: hidden;
 	}
@@ -1102,4 +1157,27 @@ footer {
 
 .page-template-page-wrapped {
 	background: #eee;
+}
+
+#scrollUp {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: $red; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */
+	svg {
+		height: 15px;
+	}
+}
+
+#scrollUp:hover {
+	background-color: #555; /* Add a dark-grey background on hover */
 }

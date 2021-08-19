@@ -1,6 +1,9 @@
 <?php 
     get_header();?>
     <div class="template">
+         <button onClick="window.history.back()" class="close">
+            <?php include get_template_directory().'/assets/images/close.php';?>
+        </button>
         <div class="bild" style="background-image:url(<?php the_field('bild');?>)"></div>
         <div class="content">
             <span class="subline">Projektvorstellung</span>

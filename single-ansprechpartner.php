@@ -1,6 +1,9 @@
 <?php 
     get_header();?>
     <div class="template">
+        <button onClick="window.history.back()" class="close">
+            <?php include get_template_directory().'/assets/images/close.php';?>
+        </button>
         <div class="profil">
             <div class="bild" style="background-image:url(<?php the_field('profilbild');?>)"></div>
             <div class="unternehmen"><?php the_field('unternehmen');?></div>
