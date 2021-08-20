@@ -110,7 +110,7 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .block-eventloop .event .bild{padding-bottom:100%;background-size:cover;background-position:center;-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.2);box-shadow:0 5px 5px rgba(0,0,0,0.2)}
 .block-eventloop .event .link{height:5px;width:30px;background:var(--main);display:block;float:right;-webkit-transition:all .3s ease;transition:all .3s ease}
 .block-eventloop .event .link:hover{-webkit-transition:all .3s ease;transition:all .3s ease}
-.single-projekt .template{background:#f7f5f5;position:fixed;z-index:500;min-height:100%;width:100%;top:0;left:0;overflow-y:scroll;display:grid;grid-template-columns:1fr 2fr}
+.single-projekt .template{background:#f7f5f5;position:absolute;z-index:500;min-height:100%;width:100%;top:0;left:0;overflow-y:scroll;display:grid;grid-template-columns:1fr 2fr}
 .single-projekt .template .bild{background-size:cover;background-position:center}
 .single-projekt .template .content{padding:100px 10vw;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .single-projekt .template .content .subline{color:var(--secondary);text-transform:uppercase}
@@ -118,7 +118,7 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .single-projekt .template .content .row{color:var(--secondary)}
 .single-projekt .template .content .row .label{color:var(--main);width:200px;display:inline-block}
 .single-projekt .template .content .row a{color:var(--secondary);text-decoration:none}
-.single-ansprechpartner .template{background:#f7f5f5;position:fixed;min-height:100%;width:100%;top:0;left:0;z-index:500;overflow-y:scroll;display:grid;grid-template-columns:1fr 2fr}
+.single-ansprechpartner .template{background:#f7f5f5;position:absolute;min-height:100%;width:100%;top:0;left:0;z-index:500;overflow-y:scroll;display:grid;grid-template-columns:1fr 2fr}
 .single-ansprechpartner .template .profil{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:100px;color:var(--secondary)}
 .single-ansprechpartner .template .profil .bild{padding-bottom:100%;-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.2);box-shadow:0 5px 5px rgba(0,0,0,0.2);background-size:cover;background-position:center;margin-bottom:50px}
 .single-ansprechpartner .template .profil .name{font-size:50px;line-height:1.1;font-weight:300}

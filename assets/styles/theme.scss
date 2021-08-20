@@ -780,7 +780,7 @@ footer {
 
 .single-projekt .template {
 	background: #f7f5f5;
-	position: fixed;
+	position: absolute;
 	z-index: 500;
 
 	min-height: 100%;
@@ -837,7 +837,7 @@ footer {
 
 .single-ansprechpartner .template {
 	background: #f7f5f5;
-	position: fixed;
+	position: absolute;
 	min-height: 100%;
 	width: 100%;
 	top: 0;
