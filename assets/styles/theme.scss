@@ -1,6 +1,7 @@
 $red: var(--main);
 $grey: var(--secondary);
 $mobile: 800px;
+$mid: 1377px;
 
 @mixin hoverEase {
 	transition: all 0.3s ease;
@@ -15,12 +16,48 @@ $mobile: 800px;
 
 @mixin fontBig {
 	font-size: 50px;
-	line-height: 1;
+	line-height: 1.1;
 	font-weight: 300;
-
+	@media (max-width: $mid) {
+		font-size: 42px;
+	}
 	@media (max-width: $mobile) {
 		font-size: 28px;
 		line-height: 34px;
+	}
+}
+
+@mixin fontNormal {
+	font-size: 20px;
+	font-weight: 400;
+	@media (max-width: $mobile) {
+		font-size: 16px;
+	}
+	@media (max-width: $mid) {
+		font-size: 18px;
+	}
+}
+
+@mixin fontHighlight {
+	font-size: 24px;
+	font-weight: 400;
+	@media (max-width: $mid) {
+		font-size: 20px;
+	}
+	@media (max-width: $mobile) {
+		font-size: 18px;
+	}
+}
+
+@mixin fontMid {
+	font-size: 36px;
+	line-height: 1;
+	font-weight: 400;
+	@media (max-width: $mid) {
+		font-size: 26px;
+	}
+	@media (max-width: $mobile) {
+		font-size: 20px;
 	}
 }
 
@@ -37,7 +74,7 @@ body {
 	color: #000;
 	font-family: "Helvetica Neue", "Arial", "sans-serif";
 	main {
-		font-size: 20px;
+		@include fontNormal;
 		line-height: 1.5;
 	}
 }
@@ -71,6 +108,9 @@ body {
 	.logo {
 		img {
 			height: 80px;
+			@media (max-width: $mid) {
+				height: 65px;
+			}
 			@media (max-width: $mobile) {
 				height: 40px;
 			}
@@ -159,6 +199,7 @@ body {
 		justify-content: center;
 		background: $red;
 		padding-top: 100px;
+
 		@media (max-width: $mobile) {
 			width: 100vw;
 			padding-top: 50px;
@@ -167,8 +208,13 @@ body {
 			position: absolute;
 			bottom: 4rem;
 			width: 50%;
+			height: auto;
 			@media (max-width: $mobile) {
 				bottom: 2rem;
+			}
+			@media (max-height: 900px) {
+				position: static;
+				margin-top: 1rem;
 			}
 		}
 		.inner {
@@ -189,7 +235,7 @@ body {
 				list-style: none;
 				text-align: center;
 				text-transform: uppercase;
-				font-size: 24px;
+				@include fontHighlight;
 				@media (max-width: $mobile) {
 					margin-bottom: 25px;
 				}
@@ -323,6 +369,9 @@ footer {
 				font-size: 80px;
 				color: #fff;
 				font-weight: normal;
+				@media (max-width: $mid) {
+					font-size: 50px;
+				}
 				@media (max-width: $mobile) {
 					font-size: 32px;
 				}
@@ -371,20 +420,16 @@ footer {
 		@include contentPadding;
 		.headline {
 			color: $grey;
-			font-size: 36px;
-			font-weight: normal;
 			margin: 0;
 			line-height: 42px;
-			@media (max-width: $mobile) {
-				font-size: 28px;
-				line-height: 32px;
-			}
+			@include fontMid();
 		}
 		.subline {
 			font-weight: normal;
 			display: block;
 			color: $red;
 			text-transform: uppercase;
+			@include fontHighlight;
 		}
 		.link {
 			height: 5px;
@@ -463,9 +508,11 @@ footer {
 			display: block;
 			color: $grey;
 			text-transform: uppercase;
+			@include fontHighlight;
 		}
 		.text {
-			font-size: 26px;
+			@include fontHighlight;
+
 			color: $grey;
 			@media (max-width: $mobile) {
 				font-size: 20px;
@@ -490,6 +537,7 @@ footer {
 	}
 
 	.single {
+		margin-bottom: 2rem;
 		@include hoverEase;
 		&:hover {
 			transform: scale(1.05);
@@ -510,12 +558,15 @@ footer {
 			color: $red;
 			text-transform: uppercase;
 			font-size: 24px;
+			@include fontHighlight;
 		}
 		.headline {
 			color: $grey;
-			font-size: 34px;
+			@include fontMid;
+			margin-bottom: 1rem;
 		}
 		.link {
+			margin-top: 1rem;
 			height: 5px;
 			width: 30px;
 			background: $red;
@@ -545,6 +596,9 @@ footer {
 		grid-template-columns: repeat(5, 1fr);
 		margin-top: 50px;
 		grid-gap: 50px;
+		@media (max-width: $mid) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 		@media (max-width: $mobile) {
 			grid-template-columns: 1fr;
 		}
@@ -568,22 +622,18 @@ footer {
 			.content {
 				margin-top: 3rem;
 				.unternehmen {
-					font-size: 20px;
+					@include fontNormal;
 					color: $grey;
 					opacity: 0.5;
-					@media (max-width: $mobile) {
-						font-size: 16px;
-					}
 				}
 				.name {
 					margin-top: 1rem;
 					color: $grey;
-					font-size: 40px;
 					font-weight: normal;
 					line-height: 44px;
+					@include fontMid();
 					@media (max-width: $mobile) {
 						margin-top: 0.5rem;
-						font-size: 24px;
 					}
 				}
 				.position {
@@ -598,7 +648,7 @@ footer {
 	@include contentPadding;
 	.subline {
 		color: $grey;
-		font-size: 24px;
+		@include fontHighlight;
 		text-transform: uppercase;
 	}
 	.headline {
@@ -648,11 +698,7 @@ footer {
 			margin-bottom: 1rem;
 			color: $grey;
 			font-weight: normal;
-			font-size: 34px;
-			@media (max-width: $mobile) {
-				font-size: 28px;
-				line-height: 32px;
-			}
+			@include fontMid;
 		}
 		.bild {
 			padding-bottom: 100%;
@@ -696,11 +742,7 @@ footer {
 			margin-bottom: 1rem;
 			color: $grey;
 			font-weight: normal;
-			font-size: 34px;
-			@media (max-width: $mobile) {
-				font-size: 28px;
-				line-height: 32px;
-			}
+			@include fontMid;
 		}
 		.datum {
 			display: block;
@@ -825,7 +867,7 @@ footer {
 		justify-content: center;
 		.subline {
 			color: $red;
-			font-size: 24px;
+			@include fontHighlight;
 			text-transform: uppercase;
 			margin-bottom: 25px;
 		}
@@ -957,7 +999,7 @@ footer {
 				appearance: none;
 				padding: 1rem;
 				border: 0px;
-				font-size: 20px;
+				@include fontNormal;
 				margin-bottom: 0.5rem;
 			}
 			.register_text p {
@@ -966,7 +1008,7 @@ footer {
 			button {
 				appearance: none;
 				border: 0px;
-				font-size: 20px;
+				@include fontNormal;
 				padding: 1rem;
 				color: $red;
 				background: #f4f4f4;
@@ -1020,14 +1062,10 @@ footer {
 			}
 		}
 		.headline {
-			font-size: 34px;
+			@include fontMid;
 			line-height: 1.1;
 			font-weight: bold;
 			margin-bottom: 1rem;
-			@media (max-width: $mobile) {
-				font-size: 28px;
-				line-height: 32px;
-			}
 		}
 		.link {
 			float: right;
@@ -1053,7 +1091,7 @@ footer {
 	input,
 	textarea {
 		font-family: "Helvetica", "Arial", "sans-serif";
-		font-size: 20px;
+		@include fontNormal;
 		width: 100%;
 		margin-bottom: 1rem;
 		padding: 1rem;
@@ -1063,7 +1101,7 @@ footer {
 	input[type="submit"] {
 		appearance: none;
 		border: 0px;
-		font-size: 20px;
+		@include fontNormal;
 		padding: 1rem;
 		color: $red;
 		background: #f4f4f4;
@@ -1087,7 +1125,7 @@ footer {
 }
 
 .fullscreen {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -1113,6 +1151,22 @@ footer {
 			background: $red;
 			color: #fff;
 		}
+	}
+}
+
+.fullscreen .close {
+	position: fixed;
+	top: 100px;
+	right: 70px;
+	height: 70px;
+	width: 70px;
+	display: block;
+	appearance: none;
+	background: transparent;
+	border: 0px;
+	img {
+		height: 70px;
+		width: 70px;
 	}
 }
 

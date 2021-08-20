@@ -41,12 +41,12 @@
             slidesToShow: 4,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1377,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
+        dots: false
       }
     },
     {

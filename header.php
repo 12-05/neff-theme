@@ -27,8 +27,9 @@
                         ) 
                     ); 
                 ?>
+                            <img  class="logo" src="<?php the_field('logo', 'option');?>" />
+
             </div>
-            <img  class="logo" src="<?php the_field('logo', 'option');?>" />
         </div>
     </header>
     <main class="main">
