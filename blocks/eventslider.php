@@ -41,7 +41,7 @@
             slidesToShow: 4,
   responsive: [
     {
-      breakpoint: 1377,
+      breakpoint: 1600,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
