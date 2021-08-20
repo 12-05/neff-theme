@@ -204,17 +204,28 @@ body {
 			width: 100vw;
 			padding-top: 50px;
 		}
+		.inner {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 		.logo {
 			position: absolute;
 			bottom: 4rem;
 			width: 50%;
 			height: auto;
+			right: 50%;
+			transform: translatex(50%);
 			@media (max-width: $mobile) {
 				bottom: 2rem;
 			}
 			@media (max-height: 900px) {
 				position: static;
+				margin: 0 auto;
+
 				margin-top: 1rem;
+				transform: none;
 			}
 		}
 		.inner {
