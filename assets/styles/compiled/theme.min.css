@@ -37,6 +37,8 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .block-slider .slick-dots li.slick-active button{width:50px}
 .block-slider .slick-dots li button{-webkit-transition:all .3s ease;transition:all .3s ease;margin:0 12.5px;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;background:var(--main);font-size:0;height:5px;width:25px}
 .block-slider .slide{position:relative;overflow:hidden;height:50vh;background-size:cover;background-position:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.block-slider .slide.position-links .info{left:10vw;right:auto}
+.block-slider .slide.position-mitte .info{left:50%;right:auto;-webkit-transform:translate(-50%);transform:translate(-50%)}
 .block-slider .slide:after{position:absolute;height:100%;width:100%;content:"";z-index:0;background:rgba(0,0,0,0.05)}
 .block-slider .slide .content{padding:2rem;position:relative;z-index:1;text-align:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .block-slider .slide .content img{max-width:400px}

@@ -333,6 +333,15 @@ footer {
 		}
 	}
 	.slide {
+		&.position-links .info {
+			left: 10vw;
+			right: auto;
+		}
+		&.position-mitte .info {
+			left: 50%;
+			right: auto;
+			transform: translate(-50%);
+		}
 		position: relative;
 		overflow: hidden;
 		height: 50vh;
