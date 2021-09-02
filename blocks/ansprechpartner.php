@@ -9,7 +9,7 @@
                 <div class="content">
                    <div class="unternehmen"><?php the_field('unternehmen', $a);?></div>
                    <div class="name"><?php echo get_the_title($a);?></div> 
-                   <div class="position"><?php the_field('position',$a);?></div> 
+                   <div class="position"><?php the_field('position_kurz',$a);?></div> 
                 </div>
             </a>
             

@@ -79,6 +79,20 @@
             return $events;
         }
 
+        public static function get_past() {
+            $today = date('Ymd');
+            $events = get_posts(array(
+                'post_type'		=> 'event',
+                'posts_per_page'	=> -1,
+                'orderby' => 'meta_value_num',
+                'order' => 'ASC',
+                'meta_key'		=> 'datum',
+                'meta_compare'	=> '<',
+	            'meta_value'		=> $today,
+            ));
+            return $events;
+        }
+
         public static function format_date($date) {
             $date = new DateTime($date);
             return $date->format('d.m.Y');

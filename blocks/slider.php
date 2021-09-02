@@ -1,7 +1,7 @@
 <?php $slides = get_field('slides');?>
 <section class="block block-slider">
     <?php if($slides):foreach($slides as $slide):?>
-        <div class="slide" style="background-image:url(<?php echo $slide['bild'];?>)">
+        <div class="slide position-<?php echo $slide['content_position'];?>" style="background-image:url(<?php echo $slide['bild'];?>)">
             <div class="content">
                 <?php if($slide['logo']) {?>
                      <img src="<?php echo $slide['logo'];?>" />
@@ -23,7 +23,10 @@
     jQuery(document).ready(function($) {
         $('.block-slider').slick({
             dots:true,
-            arrows:false
+            arrows:false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            speed: 800
         });
     });
 </script>

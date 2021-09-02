@@ -1,7 +1,7 @@
 $red: var(--main);
 $grey: var(--secondary);
 $mobile: 800px;
-$mid: 1377px;
+$mid: 1600px;
 
 @mixin hoverEase {
 	transition: all 0.3s ease;
@@ -91,6 +91,7 @@ body {
 }
 // Header
 .header {
+	pointer-events: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -106,17 +107,20 @@ body {
 		padding: 25px;
 	}
 	.logo {
+		pointer-events: all;
 		img {
-			height: 80px;
+			height: 120px;
 			@media (max-width: $mid) {
-				height: 65px;
+				height: 110px;
 			}
 			@media (max-width: $mobile) {
-				height: 40px;
+				height: 60px;
 			}
 		}
 	}
 	.hamburger-container {
+		pointer-events: all;
+
 		height: 50px;
 		right: 50px;
 		width: 50px;
@@ -181,6 +185,8 @@ body {
 		}
 	}
 	.menu-wrapper {
+		pointer-events: all;
+
 		z-index: 99;
 		transform: translateX(100%);
 		@include hoverEase;
@@ -210,24 +216,7 @@ body {
 			flex-direction: column;
 			align-items: center;
 		}
-		.logo {
-			position: absolute;
-			bottom: 4rem;
-			width: 50%;
-			height: auto;
-			right: 50%;
-			transform: translatex(50%);
-			@media (max-width: $mobile) {
-				bottom: 2rem;
-			}
-			@media (max-height: 900px) {
-				position: static;
-				margin: 0 auto;
 
-				margin-top: 1rem;
-				transform: none;
-			}
-		}
 		.inner {
 			text-align: center;
 		}
@@ -522,7 +511,7 @@ footer {
 			@include fontHighlight;
 		}
 		.text {
-			@include fontHighlight;
+			@include fontNormal();
 
 			color: $grey;
 			@media (max-width: $mobile) {
@@ -546,9 +535,12 @@ footer {
 	@media (max-width: $mobile) {
 		grid-template-columns: 1fr;
 	}
-
+	min-height: 0; /* NEW */
+	min-width: 0; /* NEW; needed for Firefox */
 	.single {
 		margin-bottom: 2rem;
+		min-width: 0;
+		overflow: hidden;
 		@include hoverEase;
 		&:hover {
 			transform: scale(1.05);
@@ -607,6 +599,8 @@ footer {
 		grid-template-columns: repeat(5, 1fr);
 		margin-top: 50px;
 		grid-gap: 50px;
+		min-height: 0; /* NEW */
+		min-width: 0; /* NEW; needed for Firefox */
 		@media (max-width: $mid) {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
@@ -615,6 +609,8 @@ footer {
 		}
 
 		.item {
+			overflow: hidden; /* NEW */
+			min-width: 0; /* NEW; needed for Firefox */
 			text-decoration: none;
 			color: $grey;
 			@include hoverEase;
@@ -766,12 +762,52 @@ footer {
 			@include backDrop;
 		}
 		.link {
+			margin-top: 2rem;
 			height: 5px;
 			width: 30px;
 			background: $red;
 			display: block;
 			float: right;
 			@include hoverEase;
+		}
+	}
+}
+
+.event-headline {
+	display: block;
+	@include contentPadding();
+	padding-bottom: 0;
+	@include fontMid();
+}
+
+.block-icons {
+	@include contentPadding;
+	h2 {
+		@include fontMid;
+		margin-bottom: 50px;
+		text-align: center;
+	}
+	.grid {
+		grid-gap: 2rem;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		@media (max-width: $mid) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		.item {
+			text-align: center;
+			img {
+				width: 100%;
+				height: auto;
+				max-width: 50%;
+				height: auto;
+			}
+			.content {
+				@include fontNormal;
+			}
 		}
 	}
 }

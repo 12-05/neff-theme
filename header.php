@@ -27,7 +27,6 @@
                         ) 
                     ); 
                 ?>
-                            <img  class="logo" src="<?php the_field('logo', 'option');?>" />
 
             </div>
         </div>

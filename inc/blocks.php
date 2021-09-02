@@ -118,7 +118,16 @@
                 'category'          => 'neff-blocks',
                 'align' => 'full',
                 'icon'              => 'calendar-alt',
-            ));         
+            ));    
+            
+             acf_register_block_type(array(
+                'name'              => 'icons',
+                'title'             => __('Icons'),
+                'render_template'   => '/blocks/icons.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'images-alt',
+            ));    
             
             acf_register_block_type(array(
                 'name'              => 'eventslider',
