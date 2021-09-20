@@ -144,7 +144,15 @@
                 'category'          => 'neff-blocks',
                 'align' => 'full',
                 'icon'              => 'email',
-            ));         
+            ));        
+            acf_register_block_type(array(
+                'name'              => 'logowall',
+                'title'             => __('Logowall'),
+                'render_template'   => '/blocks/logowall.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'email',
+            ));          
            
 
         }

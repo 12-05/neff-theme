@@ -13,7 +13,7 @@
             </div>
 			<div class="row" style='margin-top:64px'>
 					<span class="label" style='width:100px'>DATUM</span>
-					 <span><?php echo NEFF_EventModel::format_date(get_field('event_start'));?> <?php if(get_field('event_ende')) : ?> – <?php echo NEFF_EventModel::format_date(get_field('event_ende'));?> <?php endif; ?>				<?php if(get_field('event_uhrzeit')): echo ' | '.get_field('event_uhrzeit').' Uhr'; ?><?php endif;?> </span>
+<span><?php echo NEFF_EventModel::format_date(get_field('event_start'));?> <?php if(get_field('event_ende')) : ?> – <?php echo NEFF_EventModel::format_date(get_field('event_ende'));?> <?php endif; ?><?php if(get_field('event_uhrzeit')): echo ' | '.get_field('event_uhrzeit').' Uhr'; ?><?php endif;?><?php if(get_field('event_end_uhrzeit')): echo ' - '.get_field('event_end_uhrzeit').' Uhr';?><?php endif;?> </span>
 			          
 				</div>
             <div class="info">

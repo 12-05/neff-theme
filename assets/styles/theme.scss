@@ -70,6 +70,7 @@ $mid: 1600px;
 
 .subline {
 	font-weight: 200 !important;
+	margin-bottom: 0.5rem;
 }
 
 body {
@@ -472,6 +473,10 @@ footer {
 		}
 		&.align-image_right .content {
 			grid-column: 1;
+			grid-row: 1; /* NEW */
+		}
+		&.align-image_left .image {
+			grid-column: 1;
 			grid-row: 2; /* NEW */
 		}
 	}
@@ -687,6 +692,33 @@ footer {
 		font-weight: normal;
 		color: $grey;
 		@include fontBig;
+	}
+}
+
+.block-logowall {
+	@include contentPadding;
+	h2 {
+		color: $red;
+		@include fontHighlight;
+		text-transform: uppercase;
+	}
+	.logo-grid {
+		grid-template-columns: repeat(4, 1fr);
+		display: grid;
+		grid-gap: 4rem;
+		a {
+			display: flex;
+			align-items: center;
+		}
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+		@media (max-width: $mid) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 }
 
@@ -1314,11 +1346,11 @@ footer {
 	background-color: $red; /* Set a background color */
 	color: white; /* Text color */
 	cursor: pointer; /* Add a mouse pointer on hover */
-	padding: 15px; /* Some padding */
-	border-radius: 10px; /* Rounded corners */
+	padding: 10px; /* Some padding */
 	font-size: 18px; /* Increase font size */
 	svg {
-		height: 15px;
+		height: 20px;
+		width: 20px;
 	}
 }
 
@@ -1344,32 +1376,34 @@ svg#svg8 {
 
 button.slick-next.slick-arrow {
 	right: 0px;
-	width: 0;
+	appearance: none;
+	background-color: transparent;
 	position: absolute;
-	background: none;
-	top: 50%;
+	top: 30%;
 	font-size: 0;
-	height: 0;
-	border-right: 0 solid transparent;
-	border-left: 15px solid #a82617;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
+	height: 50px;
+	width: 50px;
+	background-image: url(../../images/top-arrow-red.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	transform: rotate(90deg);
 	z-index: 99;
+	border: 0px;
 }
 button.slick-prev.slick-arrow {
 	left: 0px;
 	position: absolute;
-	background: none;
-	top: 50%;
-
-	width: 0;
-	height: 0;
-	border-left: 0 solid transparent;
-	border-right: 15px solid #a82617;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-	z-index: 99;
+	background-color: transparent;
+	top: 30%;
 	font-size: 0;
+	height: 50px;
+	width: 50px;
+	background-image: url(../../images/top-arrow-red.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	transform: rotate(-90deg);
+	z-index: 99;
+	border: 0px;
 }
 
 @media (max-width: 800px) {
@@ -1379,12 +1413,12 @@ button.slick-prev.slick-arrow {
 }
 
 .block-eventslider button.slick-prev.slick-arrow {
-	border-right: 15px solid white;
+	background-image: url(../../images/top-arrow.svg);
 	top: 40%;
 }
 
 .block-eventslider button.slick-next.slick-arrow {
-	border-left: 15px solid white;
+	background-image: url(../../images/top-arrow.svg);
 	top: 40%;
 }
 

@@ -72,7 +72,7 @@
                 'posts_per_page'	=> -1,
                 'orderby' => 'meta_value_num',
                 'order' => 'ASC',
-                'meta_key'		=> 'datum',
+                'meta_key'		=> 'event_start',
                 'meta_compare'	=> '>=',
 	            'meta_value'		=> $today,
             ));
@@ -86,7 +86,7 @@
                 'posts_per_page'	=> -1,
                 'orderby' => 'meta_value_num',
                 'order' => 'ASC',
-                'meta_key'		=> 'datum',
+                'meta_key'		=> 'event_start',
                 'meta_compare'	=> '<',
 	            'meta_value'		=> $today,
             ));
@@ -116,7 +116,7 @@
 
         public function fill_columns($column, $post_id ) {
             if ( 'event_date' === $column ) {
-                echo NEFF_EventModel::format_date(get_field('datum', $postid));
+                echo NEFF_EventModel::format_date(get_field('event_start', $postid));
             }
              if ( 'type' === $column ) {
                 echo get_field('typ', $postid);
