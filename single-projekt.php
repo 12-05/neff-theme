@@ -16,10 +16,13 @@
                     <span class="label">Projektlaufzeit:</span> <?php the_field('projekt_start');?> – <?php the_field('projekt_ende');?>
                 </div>
                 <div class="row">
-                    <span class="label">Kontakt:</span> <?php echo get_field('kontakt');?> | <a href="mailto:<?php the_field('kontakt_email');?>"><?php the_field('kontakt_email');?></a>
+                    <span class="label">Kontakt:</span> <?php echo get_field('kontakt');?> <?php if( get_field('kontakt_email') ):?>  | <a href="mailto:<?php the_field('kontakt_email');?>"><?php the_field('kontakt_email');?></a><?php endif; ?>
                 </div>
                 <div class="row">
-                    <span class="label">Website:</span> <a href="<?php the_field('website');?>" target="_blank"><?php the_field('website');?></a>
+                    <span class="label">Website:</span> 
+					
+					<a style="text-decoration:underline;color:#002aff" href="<?php the_field('website');?>" target="_blank"><?php the_field('website_name');?></a>
+					
                 </div>
             </div>
         </div>

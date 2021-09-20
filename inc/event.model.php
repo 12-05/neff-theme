@@ -92,7 +92,15 @@
             ));
             return $events;
         }
-
+        public static function get_apartner() {
+         
+                $apartners = get_posts(array(
+                    'post_type'		=> 'ansprechpartner',
+                    'posts_per_page'	=> -1,
+              
+                ));
+                return $apartners;
+            }
         public static function format_date($date) {
             $date = new DateTime($date);
             return $date->format('d.m.Y');

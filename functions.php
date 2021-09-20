@@ -13,10 +13,12 @@ define('NEFFURL', get_template_directory_URI());
         public function enqueue_scripts()  {
             wp_enqueue_script('jquery');
             wp_enqueue_script( 'neff-theme-script', get_stylesheet_directory_uri().'/assets/scripts/theme.js', array(), false, true );
+	    wp_enqueue_script( 'neff-theme-script-slick', get_stylesheet_directory_uri().'/assets/scripts/slick.js' );
         }
 
         public function enqueue_styles()  {
             wp_enqueue_style( 'neff-theme-style', get_stylesheet_directory_uri().'/assets/styles/compiled/theme.css', array(), false,'all' );
+			wp_enqueue_style( 'neff-slider-css', get_template_directory_uri() . '/assets/styles/slick.css' );
         }
 
         public function load_inc_files() {
@@ -36,3 +38,4 @@ define('NEFFURL', get_template_directory_URI());
     }
 
     new NEFF_Theme_Class();
+

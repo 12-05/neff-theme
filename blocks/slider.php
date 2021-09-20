@@ -1,7 +1,7 @@
 <?php $slides = get_field('slides');?>
 <section class="block block-slider">
     <?php if($slides):foreach($slides as $slide):?>
-        <div class="slide position-<?php echo $slide['content_position'];?>" style="background-image:url(<?php echo $slide['bild'];?>)">
+        <div class="slide position-<?php echo $slide['content_position'];?>" style="background-image:url(<?php echo $slide['bild'];?>);background-size:<?php echo $slide['format'];?> !important;background-repeat:no-repeat;">
             <div class="content">
                 <?php if($slide['logo']) {?>
                      <img src="<?php echo $slide['logo'];?>" />
@@ -25,7 +25,7 @@
             dots:true,
             arrows:false,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 4000,
             speed: 800
         });
     });

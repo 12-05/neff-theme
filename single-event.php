@@ -6,21 +6,33 @@
         </button>
         <div class="bild" style="background-image:url(<?php the_field('bild');?>)"></div>
         <div class="content">
-            <span class="subline"><?php echo NEFF_EventModel::format_date(get_field('datum'));?> | <?php the_field('typ');?></span>
-            <h1 class="headline"><?php the_title();?></h1>
+			<div class="subline" style='color:#a82717'><?php echo strtoupper(get_field('typ'));?></div>
+            <h1 class="headline" style='color:#565656'><?php strtoupper(the_title());?></h1>
             <div class="text">
                 <?php the_field('beschreibung');?>
             </div>
+			<div class="row" style='margin-top:64px'>
+					<span class="label" style='width:100px'>DATUM</span>
+					 <span><?php echo NEFF_EventModel::format_date(get_field('event_start'));?> <?php if(get_field('event_ende')) : ?> – <?php echo NEFF_EventModel::format_date(get_field('event_ende'));?> <?php endif; ?>				<?php if(get_field('event_uhrzeit')): echo ' | '.get_field('event_uhrzeit').' Uhr'; ?><?php endif;?> </span>
+			          
+				</div>
             <div class="info">
-                <div class="row">
-                    <span class="label">Veranstaltungsort:</span><br />
-                    <?php the_field('veranstaltungsort');?>
-                </div>
-                <div class="row">
-                    <span class="label">Referenten:</span>
-                    <?php the_field('referenten');?>
-                </div>
-              
+				
+				  <?php if(get_field('referenten')):?>
+				  <div class="row">
+					  <span class="label">REFERENT*INNEN:</span>
+					  <?php the_field('referenten');?> 
+                 </div>
+				<?php endif;?>
+				<?php if(get_field('veranstaltungsort')):?>
+				  <div class="row">
+					  <span class="label">VERANSTALTUNGSORT:</span>
+					  <?php the_field('veranstaltungsort');?>
+                 </div>
+		       <?php endif;?>
+					 
+                  
+               
             </div>
             <?php 
                 $link = get_field('registrierung');
@@ -34,7 +46,13 @@
         <?php if(get_field('formular_aktiv')) {?>
             <div class="register">
                 <h2 class="headline">Anmeldung</h2>
-                <form>
+                <form action=”mailto:y.liu@12-05.de” ethod=”POST”
+
+
+enctype=”multipart/form-data”
+
+
+name=”EmailForm”>
                 <div>
                     <input type="text" name="name" placeholder="Ihr Name" />
                     <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" />
