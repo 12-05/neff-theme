@@ -8,6 +8,10 @@ define('NEFFURL', get_template_directory_URI());
             $this->page_builder();
             add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
             add_action('wp_enqueue_scripts', array($this, 'enqueue_styles'));
+            add_filter('acf/settings/save_json', array($this, 'save_json'));
+            add_filter('acf/settings/load_json', array($this, 'load_json'));
+            add_theme_support( 'title-tag' );
+
         }
 
         public function enqueue_scripts()  {
@@ -35,6 +39,17 @@ define('NEFFURL', get_template_directory_URI());
         public function page_builder() {
             add_theme_support('align-wide'); 
         }
+
+        public function save_json( $path ) {
+                $path = get_stylesheet_directory() . '/fields';
+                return $path;
+            }
+    
+            public function load_json($paths) {
+                unset($paths[0]);
+                $paths[] = get_stylesheet_directory() . '/fields';
+                return $paths;
+            }
     }
 
     new NEFF_Theme_Class();
