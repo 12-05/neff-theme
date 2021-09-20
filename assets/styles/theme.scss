@@ -1375,7 +1375,7 @@ svg#svg8 {
 }
 
 button.slick-next.slick-arrow {
-	right: 0px;
+	right: 15px;
 	appearance: none;
 	background-color: transparent;
 	position: absolute;
@@ -1389,9 +1389,13 @@ button.slick-next.slick-arrow {
 	transform: rotate(90deg);
 	z-index: 99;
 	border: 0px;
+	@media (max-width: $mobile) {
+		height: 30px;
+		width: 30px;
+	}
 }
 button.slick-prev.slick-arrow {
-	left: 0px;
+	left: 15px;
 	position: absolute;
 	background-color: transparent;
 	top: 30%;
@@ -1404,6 +1408,10 @@ button.slick-prev.slick-arrow {
 	transform: rotate(-90deg);
 	z-index: 99;
 	border: 0px;
+	@media (max-width: $mobile) {
+		height: 30px;
+		width: 30px;
+	}
 }
 
 @media (max-width: 800px) {
@@ -1469,6 +1477,9 @@ button.slick-prev.slick-arrow {
 	margin: 0;
 	padding: 0;
 	padding-top: 50px;
+	@media (max-width: $mobile) {
+		padding-top: 10px;
+	}
 }
 
 .block-slider .slick-dots li,
