@@ -277,6 +277,7 @@ footer .footer-menu ul{-webkit-box-pack:center;-ms-flex-pack:center;justify-cont
 footer .footer-menu ul li{margin:.3rem 0;text-align:center}
 .block-slider .slide .content img{max-width:50%}
 .block-slider .slide .content .headline{font-size:32px}
+.block-slider .slide .info{width:80%}
 .block-block .content{padding:50px 5vw}
 .block-block .content .headline{font-size:20px}
 .block-block .content .subline{font-size:18px}
