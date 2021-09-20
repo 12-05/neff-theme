@@ -8,6 +8,7 @@
         </style>
         <?php wp_head();?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="<?php the_field('logo','option');?>">
     </head>
     <body <?php body_class();?>>
     <header role="header" class="header">
