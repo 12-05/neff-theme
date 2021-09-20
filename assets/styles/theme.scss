@@ -1382,7 +1382,7 @@ button.slick-next.slick-arrow {
 	appearance: none;
 	background-color: transparent;
 	position: absolute;
-	top: 30%;
+	bottom: 0;
 	font-size: 0;
 	height: 50px;
 	width: 50px;
@@ -1401,7 +1401,7 @@ button.slick-prev.slick-arrow {
 	left: 15px;
 	position: absolute;
 	background-color: transparent;
-	top: 30%;
+	bottom: 0;
 	font-size: 0;
 	height: 50px;
 	width: 50px;
@@ -1485,10 +1485,23 @@ button.slick-prev.slick-arrow {
 	}
 }
 
+.ansprechpartner_slider .slick-dots {
+	@media (max-width: $mobile) {
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+}
+
 .block-slider .slick-dots li,
 .ansprechpartner_slider .slick-dots li {
 	font-size: 0;
 	list-style: none;
+	@media (max-width: $mobile) {
+		margin-bottom: 10px;
+	}
 }
 
 .block-slider .slick-dots li.slick-active button,

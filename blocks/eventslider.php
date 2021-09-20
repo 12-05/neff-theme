@@ -31,9 +31,7 @@
                 </div>
             </a>
         <?php endforeach;endif;?>
-		 <div style='width:100px;height:50px'>
-               
-         </div>
+		 
     </div>
 	</section>
 	<?php } else { ?>

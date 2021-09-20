@@ -204,8 +204,8 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 #scrollUp svg{height:20px;width:20px}
 #scrollUp:hover{background-color:#555}
 svg#svg8{width:20px;position:relative;left:1.4px}
-button.slick-next.slick-arrow{right:15px;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;position:absolute;top:30%;font-size:0;height:50px;width:50px;background-image:url(../../images/top-arrow-red.svg);background-size:contain;background-repeat:no-repeat;-webkit-transform:rotate(90deg);transform:rotate(90deg);z-index:99;border:0}
-button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:transparent;top:30%;font-size:0;height:50px;width:50px;background-image:url(../../images/top-arrow-red.svg);background-size:contain;background-repeat:no-repeat;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);z-index:99;border:0}
+button.slick-next.slick-arrow{right:15px;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;position:absolute;bottom:0;font-size:0;height:50px;width:50px;background-image:url(../../images/top-arrow-red.svg);background-size:contain;background-repeat:no-repeat;-webkit-transform:rotate(90deg);transform:rotate(90deg);z-index:99;border:0}
+button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:transparent;bottom:0;font-size:0;height:50px;width:50px;background-image:url(../../images/top-arrow-red.svg);background-size:contain;background-repeat:no-repeat;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);z-index:99;border:0}
 .block-eventslider button.slick-prev.slick-arrow{background-image:url(../../images/top-arrow.svg);top:40%}
 .block-eventslider button.slick-next.slick-arrow{background-image:url(../../images/top-arrow.svg);top:40%}
 .block-slider .slick-dots li button,.ansprechpartner_slider .slick-dots li button{cursor:pointer;-webkit-transition:all .3s ease;transition:all .3s ease;margin:0 12.5px;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;background:var(--main);font-size:0;height:5px;width:25px}
@@ -360,6 +360,8 @@ button.slick-prev.slick-arrow{height:30px;width:30px}
 .block-slider .slick-dots li button,.ansprechpartner_slider .slick-dots li button{width:5px}
 .block-slider .slick-dots li.slick-active button,.ansprechpartner_slider .slick-dots li.slick-active button{width:25px}
 .block-slider .slick-dots,.ansprechpartner_slider .slick-dots{padding-top:10px}
+.ansprechpartner_slider .slick-dots{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:80%;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 auto}
+.block-slider .slick-dots li,.ansprechpartner_slider .slick-dots li{margin-bottom:10px}
 .block-slider .slick-dots li button,.ansprechpartner_slider .slick-dots li button{width:5px}
 .block-slider .slick-dots li.slick-active button,.ansprechpartner_slider .slick-dots li.slick-active button{width:25px}
 .block-ansprechpartner .grid .item,.ansprechpartner_slider{margin-bottom:2rem}
