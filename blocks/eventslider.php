@@ -76,8 +76,7 @@ jQuery(document).ready( function($) {
   
   
 
-	const aslider  =   
-  $(".block-ansprechpartnerslider .slider");
+	const aslider  = $(".block-ansprechpartnerslider .slider");
   
   $(".block-ansprechpartnerslider .slider").slick({
             dots:true,
@@ -156,11 +155,11 @@ jQuery(document).ready( function($) {
   jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
     const deltax = e.originalEvent.deltaX;
     console.log(deltax);
-    if(deltax > 3) {
-      alisder.slick("slickNext");
+    if(deltax > 10) {
+      aslider.slick("slickNext");
     }
-    if(deltax < -5) {
-            alisder.slick("slickPrev");
+    if(deltax < -10) {
+            aslider.slick("slickPrev");
 
     }
   });
@@ -169,10 +168,10 @@ jQuery(document).ready( function($) {
        const deltax = e.originalEvent.deltaX;
     console.log(deltax);
 
-  if(deltax > 3) {
+  if(deltax > 10) {
       eventSlider.slick("slickNext");
     }
-    if(deltax < -5) {
+    if(deltax < -10) {
       eventSlider.slick("slickPrev");
 
     }
