@@ -75,11 +75,11 @@
 jQuery(document).ready( function($) {
   
   jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
-    console.log(e.originalEvent.wheelDeltaX);
+    console.log(e.originalEvent);
   });
 
     jQuery(".block-eventslider .slider").on('mousewheel', function(e){
-        console.log(e.originalEvent.wheelDeltaX);
+        console.log(e.originalEvent);
 
 
   });
