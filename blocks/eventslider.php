@@ -84,7 +84,7 @@ jQuery(document).ready( function($) {
   });
 
     jQuery(".block-eventslider .slider").on('mousewheel', function(e){
-  	if(e.originalEvent.wheelDelta /120 > 0) {
+  	if(e.originalEvent.wheelDeltaX /120 > 0) {
   		jQuery(this).slick('slickPrev');
   	}
   	else{
