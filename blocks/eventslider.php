@@ -162,7 +162,8 @@ jQuery(document).ready( function($) {
   });
 
     jQuery(".block-eventslider .slider").on('mousewheel', function(e){
-   
+       const deltax = e.originalEvent.deltaX;
+
   if(deltax > 3) {
       aslider.slickNext();
     }
