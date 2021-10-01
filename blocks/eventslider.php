@@ -75,21 +75,26 @@
 jQuery(document).ready( function($) {
   
   jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
-  	if(e.originalEvent.wheelDelta /120 > 0) {
-  		jQuery(this).slick('slickPrev');
-  	}
-  	else{
-  		jQuery(this).slick('slickNext');
-  	}
-  });
-
-    jQuery(".block-eventslider .slider").on('mousewheel', function(e){
+    if(e.originalEvent.wheelDeltaX > 50) {
   	if(e.originalEvent.wheelDeltaX /120 > 0) {
   		jQuery(this).slick('slickPrev');
   	}
   	else{
   		jQuery(this).slick('slickNext');
   	}
+      }
+  });
+
+    jQuery(".block-eventslider .slider").on('mousewheel', function(e){
+      if(e.originalEvent.wheelDeltaX > 50) {
+  	if(e.originalEvent.wheelDeltaX /120 > 0) {
+  		jQuery(this).slick('slickPrev');
+  	}
+  	else{
+  		jQuery(this).slick('slickNext');
+  	}
+      }
+
   });
  
  
