@@ -152,6 +152,7 @@ jQuery(document).ready( function($) {
 
   jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
     const deltax = e.originalEvent.deltaX;
+    console.log(deltax);
     if(deltax > 3) {
       eventSlider.slickNext();
     }
@@ -163,6 +164,7 @@ jQuery(document).ready( function($) {
 
     jQuery(".block-eventslider .slider").on('mousewheel', function(e){
        const deltax = e.originalEvent.deltaX;
+    console.log(deltax);
 
   if(deltax > 3) {
       aslider.slickNext();
