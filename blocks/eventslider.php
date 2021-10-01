@@ -157,10 +157,10 @@ jQuery(document).ready( function($) {
     const deltax = e.originalEvent.deltaX;
     console.log(deltax);
     if(deltax > 3) {
-      alisder.slickNext();
+      alisder.slick("slickNext");
     }
     if(deltax < -5) {
-            alisder.slickPrev();
+            alisder.slick("slickPrev");
 
     }
   });
@@ -170,10 +170,10 @@ jQuery(document).ready( function($) {
     console.log(deltax);
 
   if(deltax > 3) {
-      eventSlider.slickNext();
+      eventSlider.slick("slickNext");
     }
     if(deltax < -5) {
-      eventSlider.slickPrev();
+      eventSlider.slick("slickPrev");
 
     }
 
