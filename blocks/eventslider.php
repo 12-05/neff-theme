@@ -72,9 +72,9 @@
 
 <script>
     
-$(document).ready( function($) {
+jQuery(document).ready( function($) {
   
-  $(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
+  jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
   	if(e.originalEvent.wheelDelta /120 > 0) {
   		jQuery(this).slick('slickPrev');
   	}
@@ -83,7 +83,7 @@ $(document).ready( function($) {
   	}
   });
 
-    $(".block-eventslider .slider").on('mousewheel', function(e){
+    jQuery(".block-eventslider .slider").on('mousewheel', function(e){
   	if(e.originalEvent.wheelDelta /120 > 0) {
   		jQuery(this).slick('slickPrev');
   	}
