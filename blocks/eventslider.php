@@ -74,20 +74,9 @@
     
 jQuery(document).ready( function($) {
   
-  jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
-    console.log(e.originalEvent.deltaX);
-  });
+  
 
-    jQuery(".block-eventslider .slider").on('mousewheel', function(e){
-   
-        console.log(e.originalEvent.deltaX);
-
-
-  });
- 
- 
-
-	    $(".block-ansprechpartnerslider .slider").slick({
+	const aslider =   $(".block-ansprechpartnerslider .slider").slick({
             dots:true,
 			
             slidesToShow: 5.5,
@@ -160,6 +149,31 @@ jQuery(document).ready( function($) {
   ]
         });
 	
+
+  jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
+    const deltax = e.originalEvent.deltaX;
+    if(deltax > 3) {
+      eventSlider.slickNext();
+    }
+    if(deltax < -5) {
+            eventSlider.slickPrev();
+
+    }
+  });
+
+    jQuery(".block-eventslider .slider").on('mousewheel', function(e){
+   
+  if(deltax > 3) {
+      aslider.slickNext();
+    }
+    if(deltax < -5) {
+            aslider.slickPrev();
+
+    }
+
+  });
+ 
+ 
 		
 		
     });
