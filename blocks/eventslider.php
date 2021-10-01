@@ -76,7 +76,10 @@ jQuery(document).ready( function($) {
   
   
 
-	const aslider =   $(".block-ansprechpartnerslider .slider").slick({
+	const aslider  =   
+  $(".block-ansprechpartnerslider .slider");
+  
+  $(".block-ansprechpartnerslider .slider").slick({
             dots:true,
 			
             slidesToShow: 5.5,
@@ -154,10 +157,10 @@ jQuery(document).ready( function($) {
     const deltax = e.originalEvent.deltaX;
     console.log(deltax);
     if(deltax > 3) {
-      eventSlider.slickNext();
+      alisder.slickNext();
     }
     if(deltax < -5) {
-            eventSlider.slickPrev();
+            alisder.slickPrev();
 
     }
   });
@@ -167,10 +170,10 @@ jQuery(document).ready( function($) {
     console.log(deltax);
 
   if(deltax > 3) {
-      aslider.slickNext();
+      eventSlider.slickNext();
     }
     if(deltax < -5) {
-            aslider.slickPrev();
+      eventSlider.slickPrev();
 
     }
 
