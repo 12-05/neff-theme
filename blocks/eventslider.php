@@ -71,10 +71,29 @@
 </style>
 
 <script>
-    jQuery(document).ready(function($) {
-		
-	    const slidering = $(".block-ansprechpartnerslider .slider");
-	
+    
+$(document).ready( function($) {
+  
+  $(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
+  	if(e.originalEvent.wheelDelta /120 > 0) {
+  		jQuery(this).slick('slickPrev');
+  	}
+  	else{
+  		jQuery(this).slick('slickNext');
+  	}
+  });
+
+    $(".block-eventslider .slider").on('mousewheel', function(e){
+  	if(e.originalEvent.wheelDelta /120 > 0) {
+  		jQuery(this).slick('slickPrev');
+  	}
+  	else{
+  		jQuery(this).slick('slickNext');
+  	}
+  });
+ 
+ 
+
 	    $(".block-ansprechpartnerslider .slider").slick({
             dots:true,
 			
