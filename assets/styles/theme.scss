@@ -1031,8 +1031,16 @@ footer {
 	.bild {
 		background-size: cover;
 		background-position: center;
-		@media (max-width: $mobile) {
-			height: 33vh;
+		img {
+			width: 33vw;
+			height: 100vh;
+			object-fit: cover;
+			position: fixed;
+			@media (max-width: $mobile) {
+				height: 33vh;
+				position: static;
+				width: 100vw;
+			}
 		}
 	}
 	.content {

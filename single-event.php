@@ -4,7 +4,9 @@
          <button onClick="window.history.back()" class="close">
             <?php include get_template_directory().'/assets/images/close.php';?>
         </button>
-        <div class="bild" style="background-image:url(<?php the_field('bild');?>)"></div>
+        <div class="bild">
+            <img src="<?php the_field('bild');?>" alt="Bild" />
+        </div>
         <div class="content">
 			<div class="subline" style='color:#a82717'><?php echo strtoupper(get_field('typ'));?></div>
             <h1 class="headline" style='color:#565656'><?php strtoupper(the_title());?></h1>

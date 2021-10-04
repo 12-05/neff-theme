@@ -145,6 +145,7 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .single-ansprechpartner .template .content .row a{color:var(--secondary);text-decoration:none}
 .single-event .template{background:#f7f5f5;position:absolute;min-height:100%;width:100%;top:0;left:0;z-index:500;overflow-y:scroll;display:grid;grid-template-columns:1fr 2fr}
 .single-event .template .bild{background-size:cover;background-position:center}
+.single-event .template .bild img{width:33vw;height:100vh;-o-object-fit:cover;object-fit:cover;position:fixed}
 .single-event .template .content{padding:100px 10vw;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .single-event .template .content .subline{color:var(--main);text-transform:uppercase}
 .single-event .template .content .headline{font-size:50px;line-height:1.1;font-weight:300;font-weight:normal;margin:0;color:var(--main)}
@@ -332,7 +333,7 @@ footer .footer-menu ul li{margin:.3rem 0;text-align:center}
 .single-ansprechpartner .template .content .subline{font-size:18px}
 .single-ansprechpartner .template .content .headline{font-size:28px;line-height:34px}
 .single-event .template{position:absolute;grid-template-columns:1fr}
-.single-event .template .bild{height:33vh}
+.single-event .template .bild img{height:33vh;position:static;width:100vw}
 .single-event .template .content{padding:50px 5vw}
 .single-event .template .content .headline{font-size:28px;line-height:34px}
 .single-event .template .content .info{position:static;grid-template-columns:1fr}
