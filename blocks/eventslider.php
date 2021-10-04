@@ -119,7 +119,7 @@ jQuery(document).ready( function($) {
       dots:false,
       arrows:false,
       slidesToShow: 4.5,
-	    infinite:true,
+	    infinite:false,
       responsive: [
         {
           breakpoint: 1600,
