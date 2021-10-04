@@ -152,22 +152,24 @@ jQuery(document).ready( function($) {
     const deltax = e.originalEvent.wheelDeltaX;
     console.log(deltax);
     if(deltax/60 > 1) {
+      aslider.slick("slickPrev");
 
-      aslider.slick("slickNext");
     }
     if(deltax/60 < -1) {
+      aslider.slick("slickNext");
 
-      aslider.slick("slickPrev");
     }
   });
 
   jQuery(".block-eventslider .slider").on('mousewheel', function(e){
     const deltax = e.originalEvent.wheelDeltaX;
    if(deltax/60 > 1) {
-      eventslider.slick("slickNext");
+           eventslider.slick("slickPrev");
+
     }
     if(deltax/60 < -1) {
-      eventslider.slick("slickPrev");
+            eventslider.slick("slickNext");
+
     }
   });
  });
