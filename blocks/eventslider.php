@@ -164,11 +164,11 @@ jQuery(document).ready( function($) {
   jQuery(".block-eventslider .slider").on('mousewheel', function(e){
     const deltax = e.originalEvent.wheelDeltaX;
    if(deltax/60 > 1) {
-           eventslider.slick("slickPrev");
+           eventSlider.slick("slickPrev");
 
     }
     if(deltax/60 < -1) {
-            eventslider.slick("slickNext");
+            eventSlider.slick("slickNext");
 
     }
   });
