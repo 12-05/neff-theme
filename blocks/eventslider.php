@@ -152,12 +152,10 @@ jQuery(document).ready( function($) {
     const deltax = e.originalEvent.wheelDeltaX;
     console.log(deltax);
     if(deltax/60 > 1) {
-     alert('text')
 
       aslider.slick("slickNext");
     }
     if(deltax/60 < -1) {
-            alert('prev');
 
       aslider.slick("slickPrev");
     }
@@ -165,13 +163,10 @@ jQuery(document).ready( function($) {
 
   jQuery(".block-eventslider .slider").on('mousewheel', function(e){
     const deltax = e.originalEvent.wheelDeltaX;
-    console.log(deltax);
    if(deltax/60 > 1) {
-     alert('text')
       eventslider.slick("slickNext");
     }
     if(deltax/60 < -1) {
-      alert('prev');
       eventslider.slick("slickPrev");
     }
   });
