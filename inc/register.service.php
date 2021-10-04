@@ -2,6 +2,7 @@
     class NEFF_RegisterService {
         public function __construct() {
             add_action('rest_api_init', array($this, 'register_endpoint'));
+            add_action('acf/render_field/name=anmeldungen', array($this, 'display_table'));
         }
 
         public function register_endpoint() {
@@ -62,6 +63,31 @@
             include 'templates/event-admin-mail.php';
             $body = ob_get_clean();
             wp_mail( $to, $subject, $body, $headers );
+        }
+
+        public function display_table($field) {
+            echo '<style>.acf-field-615ac942b099f .acf-repeater {display:none;}</style>';
+            echo '<table class="wp-list-table widefat striped" style="width:100%;" cellpadding="10px">';
+            echo '<thead>';
+            echo '<tr style="font-weight:bold">';
+            echo '<td>Name</td>';
+            echo '<td>E-Mail</td>';
+            echo '<td>Firma/Bildungseinrichtung</td>';
+            echo '<td>Anmeldedatum</td>';
+            echo '</tr>';
+            echo '</thead>';
+            echo '<tbody>';
+            if($field['value']):foreach($field['value'] as $row):
+            echo '<tr>';
+            if($row):foreach($row as $key => $value):
+            echo '<td>'.$value.'</td>';
+            endforeach;endif;
+            echo '</tr>';
+            endforeach;endif;
+            echo '';
+            echo '</tbody>';
+            echo '</table>';
+
         }
     }  
     new NEFF_RegisterService();
