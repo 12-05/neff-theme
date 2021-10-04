@@ -1145,7 +1145,7 @@ footer {
 }
 .block-eventslider {
 	background: $red;
-	padding: 100px 0;
+	padding: 100px 50px;
 	@media (max-width: $mobile) {
 		padding: 50px 5vw;
 	}
@@ -1161,7 +1161,6 @@ footer {
 		width: 100%;
 	}
 	.slick-track {
-		margin-left: 50px;
 		@media (max-width: $mobile) {
 			margin-left: 0;
 		}
