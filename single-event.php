@@ -48,17 +48,13 @@
         <?php if(get_field('formular_aktiv')) {?>
             <div class="register">
                 <h2 class="headline">Anmeldung</h2>
-                <form action=”mailto:y.liu@12-05.de” ethod=”POST”
-
-
-enctype=”multipart/form-data”
-
-
-name=”EmailForm”>
+                <form id="eventform" action="/wp-json/neff/v1/register/<?php echo get_the_id();?>" method=”POST”>
                 <div>
                     <input type="text" name="name" placeholder="Ihr Name" />
                     <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" />
-                    <input type="text" name="unternehmen" placeholder="Ihr Unternehmen/ Hochschule/Forschungseinrichtung" />
+                    <input type="text" name="company" placeholder="Ihr Unternehmen/ Hochschule/Forschungseinrichtung" />
+                    <span id="error"></span>
+                    <span id="success"></span>
                 </div>
                 <div>
                     <div class="register_text">
@@ -67,6 +63,39 @@ name=”EmailForm”>
                     <button type="submit">Verbindlich anmelden</button>
                 </div>
                 </form>
+                <script>
+                    jQuery(document).ready(function($) {
+                        jQuery('#error').html("");
+                        jQuery('#success').html("");
+                        $('#eventform').on('submit', function(e) {
+                            e.preventDefault();
+                            var form = $(this);
+                            var url = form.attr('action');
+                            var name = $('input[name="name"]');
+                            var email = $('input[name="email"]');
+                            if(!name.val()) {
+                                $('#error').html("Bitte geben Sie einen Namen an.");
+                                return;
+                            }
+                            if(!email.val()) {
+                                $('#error').html("Bitte geben Sie eine E-Mail Adresse an.");
+                                return;
+                            }
+                            $.ajax({
+                                type: "POST",
+                                url: url,
+                                data: form.serialize(), // serializes the form's elements.
+                                success: function(data)
+                                {
+                                    jQuery('#error').html('Die Anmeldung war erfolgreich.');
+                                },
+                                error: function(data) {
+                                    jQuery('#error').html('Es ist ein Fehler aufgetreten.');
+                                }
+                            });
+                        });
+                    });
+                </script>
             </div>
         <?php } ?>
     </div>

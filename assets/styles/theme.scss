@@ -1099,13 +1099,14 @@ footer {
 	}
 	.register {
 		background: $red;
-		grid-column-start: 1;
+		grid-column-start: 2;
 		grid-column-end: 3;
 		@media (max-width: $mobile) {
 			grid-column-start: auto;
 			grid-column-end: auto;
 		}
 		@include contentPadding();
+		padding: 50px;
 		color: #fff;
 
 		.headline {
@@ -1128,6 +1129,7 @@ footer {
 				@include fontNormal;
 				margin-bottom: 0.5rem;
 			}
+
 			.register_text p {
 				margin: 0;
 			}
