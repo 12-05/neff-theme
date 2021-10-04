@@ -116,7 +116,7 @@ jQuery(document).ready( function($) {
 		
 	const eventSlider = $(".block-eventslider .slider");
   $('.block-eventslider .slider').slick({
-      dots:true,
+      dots:false,
       arrows:false,
       slidesToShow: 4.5,
 	    infinite:false,
