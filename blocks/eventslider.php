@@ -60,15 +60,14 @@
 	</section>
 	<?php }  ?> 
 	
-	<style>
-.ansprechpartner_slider a.item.slick-slide {
-    padding: 25px;
-}
-.ansprechpartner_slider .slick-slide {
-    height: auto;
-
-}
-</style>
+  <style>
+      .ansprechpartner_slider a.item.slick-slide {
+        padding: 25px;
+      }
+      .ansprechpartner_slider .slick-slide {
+        height: auto;
+      }
+  </style>
 
 <script>
     
@@ -83,7 +82,7 @@ jQuery(document).ready( function($) {
 			
             slidesToShow: 5.5,
 			infinite:false,
-			 arrows:true,
+			 arrows:false,
 			
   responsive: [
     {
@@ -116,40 +115,37 @@ jQuery(document).ready( function($) {
         });
 		
 	const eventSlider = $(".block-eventslider .slider");
-        $('.block-eventslider .slider').slick({
-            dots:false,
-            arrows:true,
-            slidesToShow: 4.5,
-	    infinite:false,
-  responsive: [
-    {
-      breakpoint: 1600,
-      settings: {
-        slidesToShow: 3.5,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: false
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2.5,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1.5,
-        slidesToScroll: 1
-      },
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-        });
+  $('.block-eventslider .slider').slick({
+      dots:false,
+      arrows:false,
+      slidesToShow: 4.5,
+	    infinite:true,
+      responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 3.5,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2.5,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1.5,
+            slidesToScroll: 1
+          },
+        }
+    ]
+  });
 	
 
   jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
@@ -159,32 +155,19 @@ jQuery(document).ready( function($) {
       aslider.slick("slickNext");
     }
     if(deltax < -10) {
-            aslider.slick("slickPrev");
-
+      aslider.slick("slickPrev");
     }
   });
 
-    jQuery(".block-eventslider .slider").on('mousewheel', function(e){
-       const deltax = e.originalEvent.deltaX;
+  jQuery(".block-eventslider .slider").on('mousewheel', function(e){
+    const deltax = e.originalEvent.deltaX;
     console.log(deltax);
-
-  if(deltax > 10) {
+    if(deltax > 10) {
       eventSlider.slick("slickNext");
     }
     if(deltax < -10) {
       eventSlider.slick("slickPrev");
-
     }
-
   });
- 
- 
-		
-		
-    });
-	
-
-
-
-
+ });
 </script>
