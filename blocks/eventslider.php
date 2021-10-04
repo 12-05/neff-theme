@@ -149,24 +149,30 @@ jQuery(document).ready( function($) {
 	
 
   jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
-    const deltax = e.originalEvent.deltaX;
+    const deltax = e.originalEvent.wheelDeltaX;
     console.log(deltax);
-    if(deltax > 10) {
+    if(deltax/60 > 1) {
+     alert('text')
+
       aslider.slick("slickNext");
     }
-    if(deltax < -10) {
+    if(deltax/60 < -1) {
+            alert('prev');
+
       aslider.slick("slickPrev");
     }
   });
 
   jQuery(".block-eventslider .slider").on('mousewheel', function(e){
-    const deltax = e.originalEvent.deltaX;
+    const deltax = e.originalEvent.wheelDeltaX;
     console.log(deltax);
-    if(deltax > 10) {
-      eventSlider.slick("slickNext");
+   if(deltax/60 > 1) {
+     alert('text')
+      eventslider.slick("slickNext");
     }
-    if(deltax < -10) {
-      eventSlider.slick("slickPrev");
+    if(deltax/60 < -1) {
+      alert('prev');
+      eventslider.slick("slickPrev");
     }
   });
  });
