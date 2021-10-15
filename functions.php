@@ -34,6 +34,7 @@ define('NEFFURL', get_template_directory_URI());
             require_once NEFFPATH.'/inc/partner.model.php';
             require_once NEFFPATH.'/inc/projekt.model.php';
             require_once NEFFPATH.'/inc/register.service.php';
+            require_once NEFFPATH.'/inc/partner.api.php';
 
         }
 
