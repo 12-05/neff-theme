@@ -30,7 +30,8 @@
                     return array(
                         'id' => $item->ID,
                         'title' => $item->post_title,
-                        'kategorie' => get_field('kategorie', $item->ID)
+                        'kategorie' => get_field('kategorie', $item->ID),
+                        'position' => get_field('position', $item->ID)
                     );
                 }, $posts);
                 return $data;
