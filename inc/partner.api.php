@@ -29,7 +29,7 @@
                 $data = array_map(function($item) {
                     return array(
                         'id' => $item->ID,
-                        'title' => $item->post_title,
+                        'title' => get_the_title($item->ID),
                         'kategorie' => get_field('kategorie', $item->ID),
                         'position' => get_field('position', $item->ID)
                     );
