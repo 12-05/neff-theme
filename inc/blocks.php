@@ -161,6 +161,8 @@
                 'category'          => 'neff-blocks',
                 'align' => 'full',
                 'icon'              => 'email',
+                'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
+
             ));       
            
 
