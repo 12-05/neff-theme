@@ -150,3 +150,7 @@ a {
 .block-text.text-bg {
   background-color: var(--main);
 }
+
+.social a {
+  opacity: 0.5;
+}

@@ -1,6 +1,15 @@
     </main>
     <footer role="footer">
-        <div class="copyright"><?php the_field('copyright', 'option');?></div>
+        <div class="copyright"><?php the_field('copyright', 'option');?><br /> 
+        <div class="social">
+            <?php 
+                $networks = get_field('social', 'option');
+                if($networks):foreach($networks as $network):?>
+                <a href="<?php echo $network['link'];?>" target="_blank"><img src="<?php echo $network['bild'];?>"/></a>
+                
+                <?php endforeach;endif;?>
+        </div>
+        </div>
         <div class="footer-menu">
             <?php 
                 wp_nav_menu( 
