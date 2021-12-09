@@ -157,3 +157,10 @@ a {
 .social a {
   opacity: 0.5;
 }
+
+@media (max-width: 800px) {
+  .block-text.text-bg {
+    padding: 0;
+    background-color: var(--main);
+  }
+}
