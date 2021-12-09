@@ -5,7 +5,7 @@
 <div class="grid">
 <?php if($icons):foreach($icons as $icon):?>
     <div class="item">
-        <img src="<?php echo $icon['icon'];?>" alt="icon" />
+        <img style="max-width:<?php echo get_field('breite');?>%" src="<?php echo $icon['icon'];?>" alt="icon" />
         <div class="content">
             <?php echo $icon['text'];?>
         </div>
