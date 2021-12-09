@@ -30,3 +30,7 @@
 .post-single-wrapper {
   color: var(--secondary);
 }
+
+a {
+  color: var(--main);
+}
