@@ -152,7 +152,16 @@
                 'category'          => 'neff-blocks',
                 'align' => 'full',
                 'icon'              => 'email',
-            ));          
+            ));       
+            
+            acf_register_block_type(array(
+                'name'              => 'blog-preview',
+                'title'             => __('Blog Preview'),
+                'render_template'   => '/blocks/blog-preview.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'email',
+            ));       
            
 
         }
