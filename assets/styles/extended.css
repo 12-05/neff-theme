@@ -151,6 +151,9 @@ a {
   background-color: var(--main);
 }
 
+.social {
+  margin-top: 1rem;
+}
 .social a {
   opacity: 0.5;
 }
