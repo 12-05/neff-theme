@@ -149,5 +149,5 @@ a {
 }
 
 .block-text.text-bg {
-  background-color: var(--primary);
+  background-color: var(--main);
 }
