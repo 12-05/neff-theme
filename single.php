@@ -7,6 +7,6 @@
         </div>
         <span class="date"><?php echo get_the_date( 'd.m.Y', get_the_id() ); ?></span>
         <h1><?php the_title();?></h2>
-    <?php the_content();?>
+        <div class="content"><?php the_content();?></div>
     </div>
     <?php get_footer();

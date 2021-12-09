@@ -11,3 +11,18 @@
 .blog-wrapper {
   padding-top: 200px;
 }
+
+.blog-wrapper .post {
+  display: block;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 50px;
+  text-decoration: none;
+  color: var(--secondary);
+  transition: all 0.2s ease;
+}
+
+.blog-wrapper .post:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
