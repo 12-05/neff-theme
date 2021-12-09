@@ -6,7 +6,6 @@
 .blog-wrapper h1 {
   color: var(--main);
   margin-top: 0;
-
 }
 
 .blog-wrapper {
@@ -46,11 +45,10 @@ a {
   grid-gap: 10rem;
 }
 
-@media(max-width:800px) {
+@media (max-width: 800px) {
   .block-blog-preview .grid {
     grid-template-columns: 1fr;
   }
-  
 }
 .block-blog-preview .grid img {
   width: 100%;
@@ -83,8 +81,8 @@ a {
 
 .block-blog-preview h2 {
   color: var(--main);
-  text-align:center;
-  margin-bottom:5rem;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
 .block-blog-preview h3 {
@@ -99,4 +97,49 @@ a {
 .block-blog-preview a:hover {
   transform: scale(1.02);
   transition: all 0.2s ease;
+}
 
+.block-faq {
+  padding: 100px 10vw;
+}
+
+.block-faq .antwort {
+  display: none;
+  color: var(--secondary);
+}
+
+.block-faq .frage {
+  font-size: 2rem;
+  color: var(--main);
+  cursor: pointer;
+  padding: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 800px) {
+  .block-faq .frage {
+    font-size: 1.5rem;
+  }
+}
+
+.block-faq .open .frage:after {
+  content: "ᐳ";
+  color: #ccc;
+  float: right;
+  transform: rotate(90deg);
+}
+
+.block-faq .frage:after {
+  content: "ᐳ";
+  color: #ccc;
+  float: right;
+}
+
+.block-faq .open .antwort {
+  display: block;
+  padding: 1rem;
+}
+
+.block-faq .item {
+  border-bottom: 1px solid #ccc;
+}

@@ -164,6 +164,17 @@
                 'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
 
             ));       
+
+            acf_register_block_type(array(
+                'name'              => 'faq',
+                'title'             => __('FAQ'),
+                'render_template'   => '/blocks/faq.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'faq',
+                'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
+
+            ));       
            
 
         }
