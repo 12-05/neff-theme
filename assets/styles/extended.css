@@ -1,0 +1,13 @@
+.blog-wrapper .date {
+  color: var(--secondary);
+  display: block;
+  margin-top: 2rem;
+}
+.blog-wrapper h1 {
+  color: var(--main);
+  margin-top: 0;
+}
+
+.blog-wrapper {
+  padding-top: 200px;
+}

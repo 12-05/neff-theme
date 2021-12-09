@@ -11,17 +11,21 @@ define('NEFFURL', get_template_directory_URI());
             add_filter('acf/settings/save_json', array($this, 'save_json'));
             add_filter('acf/settings/load_json', array($this, 'load_json'));
             add_theme_support( 'title-tag' );
+            add_theme_support( 'post-thumbnails' );
+
 
         }
 
         public function enqueue_scripts()  {
             wp_enqueue_script('jquery');
             wp_enqueue_script( 'neff-theme-script', get_stylesheet_directory_uri().'/assets/scripts/theme.js', array(), false, true );
-	    wp_enqueue_script( 'neff-theme-script-slick', get_stylesheet_directory_uri().'/assets/scripts/slick.js' );
+	         wp_enqueue_script( 'neff-theme-script-slick', get_stylesheet_directory_uri().'/assets/scripts/slick.js' );
         }
 
         public function enqueue_styles()  {
             wp_enqueue_style( 'neff-theme-style', get_stylesheet_directory_uri().'/assets/styles/compiled/theme.css', array(), false,'all' );
+            wp_enqueue_style( 'neff-theme-extended', get_stylesheet_directory_uri().'/assets/styles/extended.css', array(), false,'all' );
+
 			wp_enqueue_style( 'neff-slider-css', get_template_directory_uri() . '/assets/styles/slick.css' );
         }
 

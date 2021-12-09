@@ -1,4 +1,8 @@
 <?php 
-    get_header();
-    the_content();
-    get_footer();
+
+    get_header();?>
+    <div class="page-wrapper">
+        <h1><?php the_title();?></h2>
+    <?php the_content();?>
+    </div>
+    <?php get_footer();
