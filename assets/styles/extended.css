@@ -76,6 +76,11 @@ a {
   position: relative;
 }
 
+.blog-wrapper .thumbnail img {
+  max-width: 100%;
+  height: auto;
+}
+
 .block-blog-preview .date {
   display: block;
   margin-top: 2rem;
