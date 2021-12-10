@@ -191,3 +191,8 @@ a {
 .block-intro p img {
   margin-top: -1rem;
 }
+.block-intro p img {
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+}
