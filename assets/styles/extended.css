@@ -172,6 +172,12 @@ a {
   border-radius: 0px;
 }
 
+@media (max-width: 800px) {
+  #hamburger.backdrop {
+    height: 30px;
+  }
+}
+
 #hamburger.backdrop .wrap {
   position: relative;
   margin-top: 7px;
