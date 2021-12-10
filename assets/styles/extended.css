@@ -42,8 +42,8 @@ a {
 
 .block-blog-preview .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
 }
 .block-text img {
   height: auto;
