@@ -1,7 +1,9 @@
 <section class="block block-intro">
      <div class="content">
-        <span class="subline"><?php the_field('subline');?></span>
-        <h2 class="headline"><?php the_field('headline');?></h2>
+        <?php if(get_field('subline')) {?>        <span class="subline"><?php the_field('subline');?></span>
+<?php } ?>
+         <?php if(get_field('headline')) {?>        <h2 class="headline"><?php the_field('headline');?></h2>
+<?php } ?>
         <div class="text">
             <?php the_field('text');?>
         </div>
