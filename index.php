@@ -14,7 +14,6 @@ if ( $page_for_posts_id ) :
     rewind_posts();
 endif;?>
     <div class="page-wrapper blog-wrapper">
-        <h1>Blog</h1>
         <?php $posts = get_posts(array(
             'post_type' => 'post', 
             'posts_per_page' => -1
