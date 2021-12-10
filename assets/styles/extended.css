@@ -164,8 +164,8 @@ a {
     background-color: var(--main);
   }
 }
+.hamburger-icon,
 .hamburger-icon:after,
-.hamburger-icon:before,
-.hamburger-icon {
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+.hamburger-icon:before {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
