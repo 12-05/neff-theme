@@ -14,10 +14,13 @@
         <?php endforeach;endif;
     ?>
 </section>
-<h2 class="event-headline">Vergangene Veranstaltungen</h2>
+<?php $events = NEFF_EventModel::get_past();?>
+<?php if($events) {?>
+    <h2 class="event-headline">Vergangene Veranstaltungen</h2>
+
+<?php } ?>
 <section class="block block-eventloop">
     <?php 
-        $events = NEFF_EventModel::get_past();
         if($events):foreach($events as $event):?>
         <a href="<?php echo get_permalink($event->ID);?>" class="event">
             <div class="bild" style="background-image:url(<?php echo get_field('bild', $event->ID);?>"></div>
