@@ -165,7 +165,7 @@ a {
   }
 }
 
-#hamburger {
+#hamburger.backdrop {
   z-index: 0;
   background: rgba(255, 255, 255, 0.2);
   height: 40px;
@@ -173,7 +173,7 @@ a {
   border-radius: 0px;
 }
 
-#hamburger .wrap {
+#hamburger.backdrop .wrap {
   position: relative;
   margin-top: 7px;
 }
