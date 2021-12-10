@@ -164,3 +164,7 @@ a {
     background-color: var(--main);
   }
 }
+
+.hamburger-icon {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
