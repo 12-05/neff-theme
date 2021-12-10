@@ -20,7 +20,7 @@ endif;?>
         ));?>
         <?php if($posts):foreach($posts as $post): ?>
             <a href="<?php echo get_permalink($post->ID);?>" class="post">
-                <div className="thumbnail">
+                <div class="thumbnail">
                 <img src="<?php the_post_thumbnail_url('large');?>" />  
                 </div>
                 <span class="date"><?php echo get_the_date( 'd.m.Y', get_the_id() ); ?></span>
