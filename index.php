@@ -1,7 +1,24 @@
 <?php 
 
     get_header();?>
-    <?php    echo get_the_content(null, false, get_option( 'page_for_posts' ));?>
+   <?php global $post;
+$page_for_posts_id = get_option('page_for_posts');
+if ( $page_for_posts_id ) : 
+    $post = get_page($page_for_posts_id);
+    setup_postdata($post);
+    ?>
+    <div id="post-<?php the_ID(); ?>">
+        <header>
+        <h1><?php the_title(); ?></h1>
+        </header><!-- .entry-header -->
+        <div>
+            <?php the_content(); ?>
+            <?php edit_post_link('Edit', '', '', $page_for_posts_id); ?>
+        </div>
+    </div>
+    <?php
+    rewind_posts();
+endif;
     <div class="page-wrapper blog-wrapper">
         <h1>Blog</h1>
         <?php $posts = get_posts(array(

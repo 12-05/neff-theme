@@ -6,7 +6,7 @@
 .blog-wrapper h1 {
   color: var(--main);
   margin-top: 0;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 .blog-wrapper {
