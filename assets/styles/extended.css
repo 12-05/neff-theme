@@ -167,5 +167,5 @@ a {
 .hamburger-icon:after,
 .hamburger-icon:before,
 .hamburger-icon {
-  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
