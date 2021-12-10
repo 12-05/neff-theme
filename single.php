@@ -2,7 +2,7 @@
 
     get_header();?>
     <div class="page-wrapper blog-wrapper">
-        <div class="thumbnail">
+        <div class="thumbnail img">
         <img src="<?php the_post_thumbnail_url('large');?>" />  
         </div>
         <span class="date"><?php echo get_the_date( 'd.m.Y', get_the_id() ); ?></span>
