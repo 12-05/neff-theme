@@ -170,6 +170,7 @@ a {
   background: rgba(255, 255, 255, 0.2);
   height: 40px;
   top: 100px;
+  border-radius: 0px;
 }
 
 #hamburger .wrap {
