@@ -1,7 +1,7 @@
 <?php 
 
     get_header();?>
-    <?php    echo  get_the_content(null, false, get_option( 'page_for_posts' ));?>
+    <?php    var_dump(get_the_content(null, false, get_option( 'page_for_posts' )));?>
     <div class="page-wrapper blog-wrapper">
         <h1>Blog</h1>
         <?php $posts = get_posts(array(
