@@ -13,8 +13,11 @@
     <body <?php body_class();?>>
     <header role="header" class="header">
         <a class="logo" href="/"><img src="<?php the_field('logo','option');?>" alt="Logo" /></a>
+        
         <div id="hamburger" class="hamburger-container">
+            <div class="wrap">
             <span class="hamburger-icon"></span>
+        </div>
         </div>
         <div class="menu-wrapper">
             <div class="inner">
