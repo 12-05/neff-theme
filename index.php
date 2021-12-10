@@ -1,6 +1,7 @@
 <?php 
 
     get_header();?>
+    <?php     the_content();?>
     <div class="page-wrapper blog-wrapper">
         <h1>Blog</h1>
         <?php $posts = get_posts(array(
