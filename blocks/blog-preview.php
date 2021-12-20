@@ -13,7 +13,7 @@
                 <div class="content">
                     <span class="date"><?php echo get_the_date('d.m.Y', $post->ID);?></span>
                     <h3><?php echo get_the_title($post->ID);?></h3>
-                    <p><?php echo get_the_excerpt($post->ID);?></p>
+                    <p><?php echo wpautop(get_the_excerpt($post->ID));?></p>
 
         
                 </div>
