@@ -41,8 +41,8 @@
             $replyto = get_field('event_mail', $id);
             $subject = 'Ihre Anmeldung für das Event: '.get_the_title($id);
             $headers = array('Content-Type: text/html; charset=UTF-8');
-            $headers[] = 'From: Bergisch Metall <noreply@bergisch-metall.de>';
-            $headers[] =   'Reply-To: Bergisch Metall <'.$replyto.'>';
+            //$headers[] = 'From: Bergisch Metall <noreply@bergisch-metall.de>';
+            //$headers[] =   'Reply-To: Bergisch Metall <'.$replyto.'>';
             ob_start();
             include 'templates/event-user-mail.php';
             $body = ob_get_clean();
@@ -57,7 +57,7 @@
             
             $subject = 'Neue Anmeldung für das Event: '.get_the_title($id);
             $headers = array('Content-Type: text/html; charset=UTF-8');
-            $headers[] = 'From: Bergisch Metall <noreply@bergisch-metall.de>';
+            //$headers[] = 'From: Bergisch Metall <noreply@bergisch-metall.de>';
             $headers[] =   'Reply-To: '.$request['name'].' <'.$request['email'].'>';
             ob_start();
             include 'templates/event-admin-mail.php';
