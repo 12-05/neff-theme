@@ -24,9 +24,11 @@
                 <div class="row">
                     <span class="label">E-Mail:</span> <?php the_field('email');?> </a>
                 </div>
-                <div class="row">
-                    <span class="label">Website:</span> <a href="<?php the_field('domain');?>" target="_blank"><?php the_field('domain');?></a>
-                </div>
+                <?php if(get_field('domain')) {?>
+                    <div class="row">
+                        <span class="label">Website:</span> <a href="<?php the_field('domain');?>" target="_blank"><?php the_field('domain');?></a>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>
