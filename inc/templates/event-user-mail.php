@@ -54,9 +54,7 @@
             </tr>
             
         </table>
-          <p>Mit freundlichen Grüßen</p>
-        <p>Ihr Bergisch Metall Team</p>
-        <hr />
+          
         <table>
             <tr><td><?php the_field('abbinder', 'option');?></td></tr>
         </table>
