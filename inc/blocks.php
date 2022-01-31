@@ -16,7 +16,7 @@
                         $return[] = $block;
                     }
                 }
-                return $allowed_blocks;
+                return $return;
         }
         
         public function add_block_category($block_categories) {
