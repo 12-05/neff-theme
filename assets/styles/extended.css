@@ -208,3 +208,6 @@ a {
 .text-bg .text {
   color: #fff;
 }
+.text-bg .text a {
+  color: #fff;
+}
