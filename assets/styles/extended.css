@@ -204,3 +204,7 @@ a {
 .text-bg .headline {
   color: #fff !important;
 }
+
+.text-bg .text {
+  color: #fff;
+}
