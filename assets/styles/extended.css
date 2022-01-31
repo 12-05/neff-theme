@@ -197,3 +197,10 @@ a {
   height: auto;
   padding: 0;
 }
+
+.text-bg .subline {
+  color: #fff !important;
+}
+.text-bg .headline {
+  color: #fff !important;
+}
