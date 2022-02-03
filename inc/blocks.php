@@ -173,8 +173,18 @@
                 'align' => 'full',
                 'icon'              => 'faq',
                 'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
-
-            ));       
+            ));    
+            
+            
+            acf_register_block_type(array(
+                'name'              => 'video',
+                'title'             => __('Video'),
+                'render_template'   => '/blocks/video.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'play',
+                'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
+            ));   
            
 
         }
