@@ -262,3 +262,13 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
+
+.block-video .headline {
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px;
+  position: absolute;
+  bottom: 32px;
+  z-index: 11;
+  max-width: 80%;
+}
