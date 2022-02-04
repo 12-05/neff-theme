@@ -237,6 +237,8 @@ a {
   overflow: hidden;
   z-index: 1;
   background: #000;
+  background-size: cover;
+  background-position: center;
 }
 
 .block-video a {
@@ -271,4 +273,12 @@ a {
   bottom: 32px;
   z-index: 11;
   max-width: 80%;
+}
+
+.block-video iframe {
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  border: 0px;
+  display: none;
 }
