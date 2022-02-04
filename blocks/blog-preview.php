@@ -13,13 +13,9 @@
                 <div class="content">
                     <span class="date"><?php echo get_the_date('d.m.Y', $post->ID);?></span>
                     <h3><?php echo get_the_title($post->ID);?></h3>
-<<<<<<< HEAD
-                    <p><?php echo get_the_excerpt($post->ID);?></p>
-=======
                     <p><?php echo wpautop(get_the_excerpt($post->ID));?></p>
 
         
->>>>>>> 47631363d1e32e7a657d0ff249a7490ba7c578af
                 </div>
             </a>
         <?php endforeach;endif;?>
