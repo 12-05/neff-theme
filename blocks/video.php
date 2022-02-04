@@ -11,13 +11,11 @@
 </section>
 <?php if(get_field('iframe')) {?>
     <script>
-
     jQuery('.block-video a').click(function(e) {
         e.preventDefault();
         jQuery('.block-video iframe').fadeIn();
         jQuery(".block-video iframe")[0].src += "?autoplay=1";
 
     });
-
 </script>
 <?php }?>
