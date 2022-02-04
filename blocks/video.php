@@ -1,4 +1,4 @@
-<section class="block block-video" style="background-image:url(<?php the_field('hintergrundbild');?>)">
+<section  class="block block-video" style="height:<?php the_field('height');?>vh;background-image:url(<?php the_field('hintergrundbild');?>)">
 <?php if(get_field('video')){?><video poster="<?php the_field('hintergrundbild');?>" autoplay="" loop="" muted="" playsinline="" src="<?php the_field('video');?>"><?php } ?>
 </video>
     <?php if(get_field('headline')) {?>
