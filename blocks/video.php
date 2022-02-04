@@ -6,7 +6,7 @@
     <?php } ?> 
     <a class="play" target="_blank" href="<?php the_field('link');?>"><img src="<?php echo get_template_directory_uri().'/assets/images/play.svg';?>" alt="Play" /></a>
 <?php if(get_field('iframe')) { ?>
-        <iframe src="<?php the_field('link');?>"></iframe>
+        <iframe allow="fullscreen;" src="<?php the_field('link');?>"></iframe>
 <?php } ?>
 </section>
 <?php if(get_field('iframe')) {?>

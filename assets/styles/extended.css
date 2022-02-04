@@ -276,9 +276,12 @@ a {
 }
 
 .block-video iframe {
-  height: 100%;
-  width: 100%;
   z-index: 90;
   border: 0px;
   display: none;
+  position: fixed;
+  top: 100px;
+  width: 100px;
+  right: 100px;
+  left: 100px;
 }
