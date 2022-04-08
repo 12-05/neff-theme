@@ -46,3 +46,15 @@ if( function_exists('acf_add_local_field_group') ):
     ));
     
     endif;
+
+
+    add_filter( 'use_block_editor_for_post', 'my_disable_gutenberg', 10, 2 );
+
+function my_disable_gutenberg( $can_edit, $post ) {
+  if( $post->post_type == 'page' &&
+    get_page_template_slug( $post->ID ) == 'page-shortcode.php' ) {
+    return true;
+  }
+
+  return false;
+}
