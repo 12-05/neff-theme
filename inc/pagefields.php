@@ -53,8 +53,7 @@ if( function_exists('acf_add_local_field_group') ):
 function my_disable_gutenberg( $can_edit, $post ) {
   if( $post->post_type == 'page' &&
     get_page_template_slug( $post->ID ) == 'page-shortcode.php' ) {
-    return true;
-  }
+    return false;}
 
-  return false;
+  return true;
 }
