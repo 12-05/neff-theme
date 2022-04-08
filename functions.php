@@ -30,6 +30,7 @@ define('NEFFURL', get_template_directory_URI());
         }
 
         public function load_inc_files() {
+            require_once NEFFPATH.'/inc/pagefields.php';
             require_once NEFFPATH.'/inc/blocks.php';
             require_once NEFFPATH.'/inc/menus.php';
             require_once NEFFPATH.'/inc/options.php';
