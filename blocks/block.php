@@ -3,8 +3,8 @@
         <img src="<?php the_field('bild');?>" />
     </div>
     <div class="content" style="<?php if(get_field('block_farbig')) {echo 'background-color:var(--main);color:#FFF!important';}?>">
-        <span class="subline"><?php the_field('subline');?></span>
-        <h2 class="headline"><?php the_field('headline');?></h2>
+        <span class="subline"style="<?php if(get_field('block_farbig')) {echo 'color:#FFF!important';}?>"><?php the_field('subline');?></span>
+        <h2 class="headline" style="<?php if(get_field('block_farbig')) {echo 'color:#FFF!important';}?>"><?php the_field('headline');?></h2>
         <div class="text">
             <?php the_field('text');?>
         </div>
