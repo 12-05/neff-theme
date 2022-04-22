@@ -19,7 +19,7 @@
             <span class="hamburger-icon"></span>
         </div>
         </div>
-        <div class="menu-wrapper">
+        <div  style="z-index:1000000" class="menu-wrapper">
             <div class="inner">
                 <img id="hamburger-close" src="<?php echo get_stylesheet_directory_uri().'/assets/images/close.svg';?>" alt="Schließen" />
                 <?php 
