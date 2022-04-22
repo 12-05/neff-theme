@@ -21,8 +21,12 @@
         </div>
         <style>
 .sub-menu {
-    margin-top:50px!important;
+    margin-top:25px!important;
 }
+.header .menu-wrapper ul.sub-menu li {
+    margin-bottom:25px!important;
+}
+
             </style>
         <div  style="z-index:1000000" class="menu-wrapper">
             <div class="inner">
