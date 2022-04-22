@@ -127,7 +127,7 @@ jQuery(document).ready( function($) {
             slidesToShow: 3.5,
             slidesToScroll: 1,
             infinite: false,
-            dots: false
+            dots: true
           }
         },
         {
