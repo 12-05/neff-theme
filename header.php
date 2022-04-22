@@ -11,10 +11,10 @@
         <link rel="shortcut icon" href="<?php the_field('logo','option');?>">
     </head>
     <body <?php body_class();?>>
-    <header role="header" class="header">
+    <header style="z-index:999999" role="header" class="header">
         <a class="logo" href="/"><img src="<?php the_field('logo','option');?>" alt="Logo" /></a>
         
-        <div id="hamburger" style="z-index:9999999999999" lass="hamburger-container  <?php if(get_field('hamburger_backdrop', 'option')) { echo 'backdrop';}?>">
+        <div id="hamburger"  lass="hamburger-container  <?php if(get_field('hamburger_backdrop', 'option')) { echo 'backdrop';}?>">
             <div class="wrap">
             <span class="hamburger-icon"></span>
         </div>
