@@ -1,8 +1,8 @@
-<section class="block block-block align-<?php the_field('ausrichtung');?>">
+<section class="block block-block align-<?php the_field('ausrichtung');?>" >
     <div class="image">
         <img src="<?php the_field('bild');?>" />
     </div>
-    <div class="content">
+    <div class="content" style="<?php if(get_field('block_farbig')) {echo 'background-color:var(--main);color:#FFF!important';}?>">
         <span class="subline"><?php the_field('subline');?></span>
         <h2 class="headline"><?php the_field('headline');?></h2>
         <div class="text">
