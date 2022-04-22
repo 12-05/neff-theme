@@ -63,7 +63,7 @@ define('NEFFURL', get_template_directory_URI());
             public function custom_form() {
                 global $post;
                 $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
-                $o = '<section style="max-width:800px;margin:0 auto;" class="block block-text"><h1>'.the_title().'</h1><form class="protected-post-form" action="' . get_option('siteurl') . '/wp-pass.php" method="post">
+                $o = '<section style="max-width:800px;margin:0 auto;" class="block block-text"><h1>'.get_the_title().'</h1><form class="protected-post-form" action="' . get_option('siteurl') . '/wp-pass.php" method="post">
                 ' . __( "Bitte geben Sie das Passwort ein." ) . '
                 <label class="pass-label" for="' . $label . '">' . __( "Passwort:" ) . ' </label><input name="post_password" id="' . $label . '" type="password" style="background: #ffffff; border:1px solid #999; color:#333333; padding:10px;" size="20" /><br /><input type="submit" name="Submit" class="button" value="' . esc_attr__( "Abschicken" ) . '" />
                 </form></section>
