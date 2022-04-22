@@ -24,6 +24,7 @@
     margin-top:25px!important;
 }
 .header .menu-wrapper ul.sub-menu li {
+    opacity:0.5;
     margin-bottom:25px!important;
 }
 
