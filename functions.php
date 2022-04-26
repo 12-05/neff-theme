@@ -61,6 +61,7 @@ define('NEFFURL', get_template_directory_URI());
 
 
             public function custom_form() {
+                return;
                 global $post;
                 $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
                 $o = '<section style="max-width:800px;margin:0 auto;" class="block block-text"><h1>'.get_the_title().'</h1><form class="protected-post-form" action="' . get_option('siteurl') . '/wp-pass.php" method="post">
