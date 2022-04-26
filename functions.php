@@ -12,7 +12,7 @@ define('NEFFURL', get_template_directory_URI());
             add_filter('acf/settings/load_json', array($this, 'load_json'));
             add_theme_support( 'title-tag' );
             add_theme_support( 'post-thumbnails' );
-            add_filter( 'the_password_form', array($this, 'custom_form') );
+           // add_filter( 'the_password_form', array($this, 'custom_form') );
 
 
         }
