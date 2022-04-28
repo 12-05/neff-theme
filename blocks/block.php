@@ -1,4 +1,4 @@
-<section class="block block-block align-<?php the_field('ausrichtung');?>" style="<?php if(get_field('contain')) {echo 'background-size:contain;';}?><?php if(get_field('block_farbig')) {echo 'background-color:var(--main);color:#FFF!important';}?>">
+<section class="block block-block align-<?php the_field('ausrichtung');?>" style="<?php if(get_field('contain') === "contain") {echo 'background-size:contain;';}?><?php if(get_field('block_farbig')) {echo 'background-color:var(--main);color:#FFF!important';}?>">
     <div class="image">
         <img src="<?php the_field('bild');?>" />
     </div>
