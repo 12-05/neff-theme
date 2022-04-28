@@ -146,7 +146,7 @@
     {
       "key": "field_6222116ss5dsssssssssss95e20da",
       "label": "Contain",
-      "name": "Contain",
+      "name": "contain",
       "type": "true_false",
       "instructions": "",
       "required": 0,
@@ -156,12 +156,10 @@
         "class": "",
         "id": ""
       },
-
       "allow_null": 0,
       "other_choice": 0,
       "default_value": "",
       "layout": "vertical",
-      "return_format": "value",
       "save_other_choice": 0
     }
   ],
