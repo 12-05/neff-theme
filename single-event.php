@@ -8,8 +8,8 @@
             <img src="<?php the_field('bild');?>" alt="Bild" />
         </div>
         <div class="content">
-			<div class="subline" style='color:#a82717'><?php echo strtoupper(get_field('typ'));?></div>
-            <h1 class="headline" style='color:#565656'><?php strtoupper(the_title());?></h1>
+			<div class="subline" style='color:var(--main)'><?php echo strtoupper(get_field('typ'));?></div>
+            <h1 class="headline" style='color:var(--secondary)'><?php strtoupper(the_title());?></h1>
             <div class="text">
                 <?php the_field('beschreibung');?>
             </div>
