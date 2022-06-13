@@ -23,6 +23,10 @@
   transition: all 0.2s ease;
 }
 
+.blog-wrapper .block-text {
+  padding: 0;
+}
+
 .blog-wrapper .post:hover {
   transform: scale(1.02);
   transition: all 0.2s ease;
