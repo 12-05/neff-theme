@@ -4,8 +4,9 @@
     <?php if(get_field('headline')) {?>
         <div class="headline"><?php the_field('headline');?></div>
     <?php } ?> 
+    <?php if(get_field('iframe')) { ?>
+
     <a  style="z-index:90" class="play" target="_blank" href="<?php the_field('link');?>"><img src="<?php echo get_template_directory_uri().'/assets/images/play.svg';?>" alt="Play" /></a>
-<?php if(get_field('iframe')) { ?>
         <iframe style="z-index:95!important;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="<?php the_field('link');?>"></iframe>
 <?php } ?>
 </section>
