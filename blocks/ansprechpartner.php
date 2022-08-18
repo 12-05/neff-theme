@@ -5,7 +5,7 @@
             $as = get_field('ansprechpartner');
             if($as):foreach($as as $a):?>
             <a href="<?php echo get_permalink($a);?>" class="item">
-                <div class="profilbild" style="background-image:url(<?php the_field('profilbild', $a);?>)"></div>
+                <div class="profilbild" style="<?php if(get_field('big_as_images', 'option')){?>background-position:top center;<?php } ?>background-image:url(<?php the_field('profilbild', $a);?>)"></div>
                 <div class="content">
                    <div class="unternehmen"><?php the_field('unternehmen', $a);?></div>
                    <div class="name"><?php echo get_the_title($a);?></div> 
