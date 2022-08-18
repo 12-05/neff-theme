@@ -20,10 +20,10 @@
             <div class="info">
                 <div class="subline">Kontakt</div>
                 <div class="row">
-                    <span class="label">Telefon:</span> <?php the_field('telefon');?>
+                    <span class="label" style="width:100px">Telefon:</span> <?php the_field('telefon');?>
                 </div>
                 <div class="row">
-                    <span class="label">E-Mail:</span> <?php the_field('email');?> </a>
+                    <span class="label" style="width:100px">E-Mail:</span> <?php the_field('email');?> </a>
                 </div>
                 
             </div>
