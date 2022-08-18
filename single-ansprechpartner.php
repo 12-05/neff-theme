@@ -6,7 +6,7 @@
         <button onClick="window.history.back()" class="close">
             <?php include get_template_directory().'/assets/images/close.php';?>
         </button>
-        <div class="profilbild" style="background-image:url(<?php the_field('profilbild');?>">
+        <div class="profilbild" style="background-size:cover;background-position:center;background-image:url(<?php the_field('profilbild');?>">
       
         </div>
         <div class="content">
