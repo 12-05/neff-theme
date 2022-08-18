@@ -276,3 +276,14 @@ a {
   display: none;
   font-size: 0;
 }
+
+.big_as .profilbild {
+  background-size: cover;
+}
+
+.hashtags {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #666;
+}

@@ -174,6 +174,16 @@
                 'icon'              => 'faq',
                 'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
             ));    
+
+            acf_register_block_type(array(
+                'name'              => 'spacer',
+                'title'             => __('Spacer'),
+                'render_template'   => '/blocks/spacer.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'spacer',
+                'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
+            ));    
             
             
             acf_register_block_type(array(

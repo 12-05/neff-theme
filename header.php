@@ -2,7 +2,7 @@
     <head>
         <style>
             :root {
-                --main: <?php the_field('color-main','option');?>;
+                --main: <?php echo get_field('separate_farbe',get_the_id()) ? get_field('separate_farbe', get_the_id()):get_field('color-main','option');?>;
                 --secondary: <?php the_field('color-secondary','option');?>;
             }
         </style>

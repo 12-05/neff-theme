@@ -125,7 +125,7 @@
                         "links": "Links",
                         "mitte": "Mitte"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -150,12 +150,28 @@
                         "cover": "cover",
                         "contain": "contain"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
                     "return_format": "value",
                     "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_62fe5f037faae",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
                     "placeholder": ""
                 }
             ]
@@ -178,5 +194,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632139400
+    "show_in_rest": 0,
+    "modified": 1660837643
 }

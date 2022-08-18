@@ -23,7 +23,6 @@
         'submit_value'  => 'Neuen Partner erstellen'
     )); ?>
     <?php acf_enqueue_uploader();?>
-    <p>Bei technischen Schwierigkeiten oder Rückfragen melden Sie sich bitte unter spanke@neue-effizienz.de.</p>
  </div>
 <?php } ?>
  

@@ -75,3 +75,16 @@ define('NEFFURL', get_template_directory_URI());
 
     new NEFF_Theme_Class();
 
+
+    //  MISC 
+
+    function getProjectColor($id) {
+      // get first term of project 
+        $terms = get_the_terms($id, 'projektkategorie');
+        if($terms) {
+            $term = array_shift($terms);
+            $farbe = get_field('farbe','term_'.$term->term_id);
+            return $farbe;
+        }
+        return $terms;
+    }

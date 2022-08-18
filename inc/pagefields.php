@@ -55,5 +55,5 @@ function my_disable_gutenberg( $can_edit, $post ) {
     get_page_template_slug( $post->ID ) == 'page-shortcode.php' ) {
     return false;}
 
-  return true;
+  return $can_edit;
 }

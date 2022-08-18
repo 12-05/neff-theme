@@ -58,7 +58,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
         },
         {
             "key": "field_611cb9f0dfb9e",
@@ -73,7 +75,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
         },
         {
             "key": "field_615ad4574eb68",
@@ -197,6 +201,25 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_62fe5fe17314d",
+            "label": "Große Bilder bei den Ansprechpartnern",
+            "name": "big_as_images",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -216,5 +239,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1639143542
+    "show_in_rest": 0,
+    "modified": 1660837875
 }

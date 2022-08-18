@@ -1,5 +1,47 @@
 <?php 
     get_header();?>
+
+<?php if(get_field('big_as_images', 'option')) {?>
+    <div class="template big_as">
+        <button onClick="window.history.back()" class="close">
+            <?php include get_template_directory().'/assets/images/close.php';?>
+        </button>
+        <div class="profilbild" style="background-image:url(<?php the_field('profilbild');?>">
+      
+        </div>
+        <div class="content">
+            <h1 class="headline"><?php the_title();?></h1>
+            <div class="position" style="margin-bottom:3rem"><?php the_field('position');?></div>
+            <div class="text">
+                <div class="subline">Background</div>
+                <?php the_field('expertise');?>
+            </div>
+            <div style="display:grid;grid-template-columns: 1fr 1fr;grid-gap:1rem;margin-top:2rem;">
+            <div class="info">
+                <div class="subline">Kontakt</div>
+                <div class="row">
+                    <span class="label">Telefon:</span> <?php the_field('telefon');?>
+                </div>
+                <div class="row">
+                    <span class="label">E-Mail:</span> <?php the_field('email');?> </a>
+                </div>
+                
+            </div>
+            <div class="hashtags">
+                <?php $hashtags = get_field('hashtags');
+                if($hashtags) {
+                    foreach($hashtags as $hashtag) {
+                        echo '<div class="hashtag">/ '.$hashtag['text'].'</div>';
+                    }
+                }
+                ?>
+            </div>
+            </div>
+        </div>
+    </div>
+
+<?php } else { ?>
+
     <div class="template">
         <button onClick="window.history.back()" class="close">
             <?php include get_template_directory().'/assets/images/close.php';?>
@@ -32,6 +74,10 @@
             </div>
         </div>
     </div>
+<?php } ?> 
+
+
+    
     
     <?php 
     get_footer();
