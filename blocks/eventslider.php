@@ -43,7 +43,7 @@
         <?php $apartners = NEFF_EventModel::get_apartner();
         if($apartners):foreach($apartners as $apartner):?>
             <a href="<?php echo get_permalink($apartner->ID);?>" class="item">
-                <div class="profilbild" style="background-image:url(<?php the_field('profilbild', $apartner->ID);?>)"></div>
+                <div class="profilbild" style="<?php if(get_field('big_as_images', 'option')){?>background-position:top center;<?php } ?>background-image:url(<?php the_field('profilbild', $apartner->ID);?>)"></div>
                 <div class="content">
                     	<?php if( get_field('unternehmen_kurz', $apartner->ID) ): ?>
 				<div class="unternehmen"><?php the_field('unternehmen_kurz', $apartner->ID);?></div>
