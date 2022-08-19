@@ -26,7 +26,7 @@
                     <span class="label" style="width:100px">Telefon:</span> <?php the_field('telefon');?>
                 </div>
                 <div class="row">
-                    <span class="label" style="width:100px">E-Mail:</span> <?php the_field('email');?> </a>
+                    <span class="label" style="width:100px">E-Mail:</span> <a  style="color:#666" href="mailto:<?php the_field('email');?>"><?php the_field('email');?> </a>
                 </div>
                 
             </div>
