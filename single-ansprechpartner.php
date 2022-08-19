@@ -10,7 +10,7 @@
       
         </div>
         <div class="content">
-            <h1 class="headline" style="color:#333"><?php the_title();?></h1>
+            <h1 class="headline" style="color:#333;padding-bottom:0;"><?php the_title();?></h1>
             <div class="position" style="margin-bottom:3rem"><?php the_field('position');?></div>
             <div class="text">
                 <?php if(get_field('expertise')) {?>
