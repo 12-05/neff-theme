@@ -287,3 +287,15 @@ a {
   text-transform: uppercase;
   color: #666;
 }
+
+.new-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+@media (max-width: 800px) {
+  .new-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

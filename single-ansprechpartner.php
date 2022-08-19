@@ -19,7 +19,7 @@
                 <?php } ?> 
             
             </div>
-            <div style="display:grid;grid-template-columns: 1fr 1fr;grid-gap:1rem;margin-top:2rem;">
+            <div class="new-info-grid" style="">
             <div class="info">
                 <div class="subline">Kontakt</div>
                 <div class="row">
