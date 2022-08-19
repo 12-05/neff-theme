@@ -13,8 +13,11 @@
             <h1 class="headline" style="color:#333"><?php the_title();?></h1>
             <div class="position" style="margin-bottom:3rem"><?php the_field('position');?></div>
             <div class="text">
-                <div class="subline">Background</div>
+                <?php if(get_field('expertise')) {?>
+                    <div class="subline">Background</div>
                 <?php the_field('expertise');?>
+                <?php } ?> 
+            
             </div>
             <div style="display:grid;grid-template-columns: 1fr 1fr;grid-gap:1rem;margin-top:2rem;">
             <div class="info">
