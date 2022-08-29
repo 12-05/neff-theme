@@ -152,7 +152,49 @@
                 'category'          => 'neff-blocks',
                 'align' => 'full',
                 'icon'              => 'email',
-            ));          
+            ));       
+            
+            acf_register_block_type(array(
+                'name'              => 'blog-preview',
+                'title'             => __('Blog Preview'),
+                'render_template'   => '/blocks/blog-preview.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'email',
+                'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
+
+            ));       
+
+            acf_register_block_type(array(
+                'name'              => 'faq',
+                'title'             => __('FAQ'),
+                'render_template'   => '/blocks/faq.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'faq',
+                'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
+            ));    
+
+            acf_register_block_type(array(
+                'name'              => 'spacer',
+                'title'             => __('Spacer'),
+                'render_template'   => '/blocks/spacer.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'spacer',
+                'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
+            ));    
+            
+            
+            acf_register_block_type(array(
+                'name'              => 'video',
+                'title'             => __('Video'),
+                'render_template'   => '/blocks/video.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'play',
+                'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
+            ));   
            
 
         }

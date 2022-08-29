@@ -84,6 +84,27 @@
                     "delay": 0
                 }
             ]
+        },
+        {
+            "key": "field_61b1c935193fa",
+            "label": "Breite der Icons",
+            "name": "breite",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 55,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -103,5 +124,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632139398
+    "modified": 1639041401
 }

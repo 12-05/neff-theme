@@ -14,11 +14,10 @@ body main{font-size:20px;font-weight:400;line-height:1.5}
 .hamburger-active .header .hamburger-container .hamburger-icon{background:transparent;-webkit-transform:rotate(-135deg);transform:rotate(-135deg)}
 .hamburger-active .header .hamburger-container .hamburger-icon:before,.hamburger-active .header .hamburger-container .hamburger-icon:after{top:0}
 .hamburger-active .header .hamburger-container .hamburger-icon:before{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
-.header .menu-wrapper{pointer-events:all;z-index:99;-webkit-transform:translateX(100%);transform:translateX(100%);-webkit-transition:all .3s ease;transition:all .3s ease;position:fixed;right:0;top:0;bottom:0;width:390px;-webkit-box-sizing:border-box;box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:var(--main);padding-top:100px}
+.header .menu-wrapper{pointer-events:all;overflow:auto;z-index:99;-webkit-transform:translateX(100%);transform:translateX(100%);-webkit-transition:all .3s ease;transition:all .3s ease;position:fixed;right:0;top:0;bottom:0;width:390px;-webkit-box-sizing:border-box;box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:var(--main);padding-top:100px}
 .header .menu-wrapper:hover{-webkit-transition:all .3s ease;transition:all .3s ease}
 .hamburger-active .header .menu-wrapper{-webkit-transform:translateX(0);transform:translateX(0)}
-.header .menu-wrapper .inner{text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.header .menu-wrapper .inner{text-align:center}
+.header .menu-wrapper .inner{text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center}
 .header .menu-wrapper #hamburger-close{width:50px;height:50px;margin-bottom:100px;cursor:pointer}
 .header .menu-wrapper ul{margin:0;padding:0;text-align:center}
 .header .menu-wrapper ul li{margin-bottom:50px;list-style:none;text-align:center;text-transform:uppercase;font-size:24px;font-weight:400}
@@ -67,7 +66,7 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .block-intro .content{width:100%;padding:100px 10vw;padding-right:50px;-webkit-box-sizing:border-box;box-sizing:border-box}
 .block-intro .content .headline{font-size:50px;line-height:1.1;font-weight:300;color:var(--secondary);font-weight:normal;line-height:52px;margin:0}
 .block-intro .content .subline{display:block;color:var(--main);text-transform:uppercase;font-size:24px;font-weight:400}
-.block-intro .content .text{font-size:20px;font-weight:400;color:var(--secondary)}
+.block-intro .content .text{font-size:20px;font-weight:400}
 .block-grid{display:grid;padding:100px 10vw;grid-template-columns:repeat(3,1fr);grid-gap:5vw;min-height:0;min-width:0}
 .block-grid .single{margin-bottom:2rem;min-width:0;overflow:hidden;-webkit-transition:all .3s ease;transition:all .3s ease;color:var(--secondary);text-decoration:none}
 .block-grid .single:hover{-webkit-transition:all .3s ease;transition:all .3s ease}
@@ -145,6 +144,7 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .single-ansprechpartner .template .content .row a{color:var(--secondary);text-decoration:none}
 .single-event .template{background:#f7f5f5;position:absolute;min-height:100%;width:100%;top:0;left:0;z-index:500;overflow-y:scroll;display:grid;grid-template-columns:1fr 2fr}
 .single-event .template .bild{background-size:cover;background-position:center}
+.single-event .template .bild img{width:33vw;height:100vh;-o-object-fit:cover;object-fit:cover;position:fixed}
 .single-event .template .content{padding:100px 10vw;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .single-event .template .content .subline{color:var(--main);text-transform:uppercase}
 .single-event .template .content .headline{font-size:50px;line-height:1.1;font-weight:300;font-weight:normal;margin:0;color:var(--main)}
@@ -155,7 +155,7 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .single-event .template .content .row{color:var(--secondary)}
 .single-event .template .content .row .label{color:var(--main);width:200px;font-weight:200;display:inline-block}
 .single-event .template .content .row a{color:var(--secondary);text-decoration:none}
-.single-event .template .register{background:var(--main);grid-column-start:1;grid-column-end:3;padding:100px 10vw;color:#fff}
+.single-event .template .register{background:var(--main);grid-column-start:2;grid-column-end:3;padding:100px 10vw;padding:50px;color:#fff}
 .single-event .template .register .headline{text-transform:uppercase;font-size:50px;line-height:1.1;font-weight:300}
 .single-event .template .register form{display:grid;grid-template-columns:2fr 1fr;grid-gap:100px}
 .single-event .template .register form input{width:100%;-webkit-appearance:none;-moz-appearance:none;appearance:none;padding:1rem;border:0;font-size:20px;font-weight:400;margin-bottom:.5rem}
@@ -163,11 +163,10 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .single-event .template .register form button{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;font-size:20px;font-weight:400;padding:1rem;color:var(--main);background:#f4f4f4;-webkit-box-shadow:0 5px 5px rgba(0,0,0,0.2);box-shadow:0 5px 5px rgba(0,0,0,0.2);width:100%;margin-top:1rem;-webkit-transition:all .3s ease;transition:all .3s ease;cursor:pointer}
 .single-event .template .register form button:hover{-webkit-transition:all .3s ease;transition:all .3s ease}
 .single-event .template .register form button:hover{-webkit-box-shadow:none;box-shadow:none;-webkit-transform:translateY(2px);transform:translateY(2px)}
-.block-eventslider{background:var(--main);padding:100px 0}
-.block-eventslider .slick-slide{margin:0 27px}
+.block-eventslider{background:var(--main);padding:100px 50px}
+.block-eventslider .slick-slide{padding:0 25px;-webkit-box-sizing:border-box;box-sizing:border-box}
 .block-eventslider .slick-list{margin:0 -27px}
 .block-eventslider .slider{width:100%}
-.block-eventslider .slick-track{margin-left:50px}
 .block-eventslider .event{height:auto;display:block;overflow:hidden;-webkit-transition:all .3s ease;transition:all .3s ease;text-decoration:none;color:#fff}
 .block-eventslider .event:hover{-webkit-transition:all .3s ease;transition:all .3s ease}
 .block-eventslider .event:hover{-webkit-transform:scale(1.05);transform:scale(1.05)}
@@ -221,6 +220,7 @@ button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:trans
 .block-ansprechpartner .grid .item .content .unternehmen,.ansprechpartner_slider .unternehmen{font-size:20px;font-weight:400;color:var(--secondary);opacity:.5}
 .block-ansprechpartner .grid .item .content .name,.ansprechpartner_slider .item .content .name{margin-top:1rem;color:var(--secondary);font-weight:normal;line-height:44px;font-size:31px;line-height:1;font-weight:400}
 .block-ansprechpartner .grid .item .content .position,.ansprechpartner_slider .position{margin-top:.5rem}
+.big_as .profilbild{background-size:cover}
 @media(max-width:1600px){body main{font-size:18px}
 .header .logo img{height:110px}
 .header .menu-wrapper ul li{font-size:20px}
@@ -333,7 +333,7 @@ footer .footer-menu ul li{margin:.3rem 0;text-align:center}
 .single-ansprechpartner .template .content .subline{font-size:18px}
 .single-ansprechpartner .template .content .headline{font-size:28px;line-height:34px}
 .single-event .template{position:absolute;grid-template-columns:1fr}
-.single-event .template .bild{height:33vh}
+.single-event .template .bild img{height:33vh;position:static;width:100vw}
 .single-event .template .content{padding:50px 5vw}
 .single-event .template .content .headline{font-size:28px;line-height:34px}
 .single-event .template .content .info{position:static;grid-template-columns:1fr}

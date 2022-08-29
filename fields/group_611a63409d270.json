@@ -169,6 +169,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_62fe5c1375020",
+            "label": "Externer Link",
+            "name": "externer_link",
+            "type": "text",
+            "instructions": "Ändert die Verlinkung auf eine Externe- oder Interne Seite",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -188,5 +207,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632139399
+    "show_in_rest": 0,
+    "modified": 1660836914
 }

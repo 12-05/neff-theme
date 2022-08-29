@@ -43,7 +43,7 @@
         <?php $apartners = NEFF_EventModel::get_apartner();
         if($apartners):foreach($apartners as $apartner):?>
             <a href="<?php echo get_permalink($apartner->ID);?>" class="item">
-                <div class="profilbild" style="background-image:url(<?php the_field('profilbild', $apartner->ID);?>)"></div>
+                <div class="profilbild" style="<?php if(get_field('big_as_images', 'option')){?>background-position:top center;<?php } ?>background-image:url(<?php the_field('profilbild', $apartner->ID);?>)"></div>
                 <div class="content">
                     	<?php if( get_field('unternehmen_kurz', $apartner->ID) ): ?>
 				<div class="unternehmen"><?php the_field('unternehmen_kurz', $apartner->ID);?></div>
@@ -60,27 +60,29 @@
 	</section>
 	<?php }  ?> 
 	
-	<style>
-.ansprechpartner_slider a.item.slick-slide {
-    padding: 25px;
-}
-.ansprechpartner_slider .slick-slide {
-    height: auto;
-
-}
-</style>
+  <style>
+      .ansprechpartner_slider a.item.slick-slide {
+        padding: 25px;
+      }
+      .ansprechpartner_slider .slick-slide {
+        height: auto;
+      }
+  </style>
 
 <script>
-    jQuery(document).ready(function($) {
-		
-	    const slidering = $(".block-ansprechpartnerslider .slider");
-	
-	    $(".block-ansprechpartnerslider .slider").slick({
+    
+jQuery(document).ready( function($) {
+  
+  
+
+	const aslider  = $(".block-ansprechpartnerslider .slider");
+  
+  $(".block-ansprechpartnerslider .slider").slick({
             dots:true,
 			
             slidesToShow: 5.5,
 			infinite:false,
-			 arrows:true,
+			 arrows:false,
 			
   responsive: [
     {
@@ -89,7 +91,7 @@
         slidesToShow: 3.5,
         slidesToScroll: 1,
         infinite: true,
-        dots: false
+        dots: true
       }
     },
     {
@@ -113,47 +115,61 @@
         });
 		
 	const eventSlider = $(".block-eventslider .slider");
-        $('.block-eventslider .slider').slick({
-            dots:false,
-            arrows:true,
-            slidesToShow: 4.5,
+  $('.block-eventslider .slider').slick({
+      dots:false,
+      arrows:false,
+      slidesToShow: 4.5,
 	    infinite:false,
-  responsive: [
-    {
-      breakpoint: 1600,
-      settings: {
-        slidesToShow: 3.5,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: false
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2.5,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1.5,
-        slidesToScroll: 1
-      },
+      responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 3.5,
+            slidesToScroll: 1,
+            infinite: false,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2.5,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1.5,
+            slidesToScroll: 1
+          },
+        }
+    ]
+  });
+	
+
+  jQuery(".block-ansprechpartnerslider .slider").on('mousewheel', function(e){
+    const deltax = e.originalEvent.wheelDeltaX;
+    console.log(deltax);
+    if(deltax/60 > 1) {
+      aslider.slick("slickPrev");
+
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-        });
-	
-		
-		
-    });
-	
+    if(deltax/60 < -1) {
+      aslider.slick("slickNext");
 
+    }
+  });
 
+  jQuery(".block-eventslider .slider").on('mousewheel', function(e){
+    const deltax = e.originalEvent.wheelDeltaX;
+   if(deltax/60 > 1) {
+           eventSlider.slick("slickPrev");
 
+    }
+    if(deltax/60 < -1) {
+            eventSlider.slick("slickNext");
 
+    }
+  });
+ });
 </script>

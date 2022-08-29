@@ -56,6 +56,36 @@
                 'capability_type' => 'post',
             );
             register_post_type( 'projekt', $args );
+
+            $labels = array(
+                'name'              => _x( 'Projektkategorien', 'taxonomy general name', 'textdomain' ),
+                'singular_name'     => _x( 'Projektkategorie', 'taxonomy singular name', 'textdomain' ),
+                'search_items'      => __( 'Search Projektkategorien', 'textdomain' ),
+                'all_items'         => __( 'All Projektkategorien', 'textdomain' ),
+                'parent_item'       => __( 'Parent Projektkategorie', 'textdomain' ),
+                'parent_item_colon' => __( 'Parent Projektkategorie:', 'textdomain' ),
+                'edit_item'         => __( 'Edit Projektkategorie', 'textdomain' ),
+                'update_item'       => __( 'Update Projektkategorie', 'textdomain' ),
+                'add_new_item'      => __( 'Add New Projektkategorie', 'textdomain' ),
+                'new_item_name'     => __( 'New Projektkategorie Name', 'textdomain' ),
+                'menu_name'         => __( 'Projektkategorie', 'textdomain' ),
+            );
+            $args = array(
+                'labels' => $labels,
+                'description' => __( '', 'textdomain' ),
+                'hierarchical' => false,
+                'public' => true,
+                'publicly_queryable' => true,
+                'show_ui' => true,
+                'show_in_menu' => true,
+                'show_in_nav_menus' => true,
+                'show_tagcloud' => true,
+                'show_in_quick_edit' => true,
+                'show_admin_column' => false,
+                'show_in_rest' => true,
+            );
+            register_taxonomy( 'projektkategorie', array('projekt'), $args );
+        
         }
 
         public function register_fields() {

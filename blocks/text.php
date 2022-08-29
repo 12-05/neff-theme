@@ -1,4 +1,4 @@
-<section class="block block-text">
+<section class="block block-text <?php if(get_field('bg')) {echo 'text-bg';}?>" <?php if(!get_field('text')) { ?>style="padding-bottom:20px;"<?php } ?>>
     <?php 
         $headline = get_field('headline');
         $subline = get_field('subline');
