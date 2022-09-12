@@ -47,6 +47,7 @@
             $data = get_fields($id);
             $data['id'] = $id;
             $data['title'] = $post->post_title;
+            $data['logo'] = get_field('logo', $post->ID);
             return $data;
         }
 
