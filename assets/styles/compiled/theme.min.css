@@ -370,4 +370,5 @@ button.slick-prev.slick-arrow{height:30px;width:30px}
 .block-ansprechpartner .grid .item .content .unternehmen,.ansprechpartner_slider .unternehmen{font-size:16px}
 .block-ansprechpartner .grid .item .content .name,.ansprechpartner_slider .name{font-size:20px}
 .block-ansprechpartner .grid .item .content .name,.ansprechpartner_slider .name{margin-top:.5rem}
+}@media(max-width:768px){.single-ansprechpartner .template .profilbild{background-position:top center !important}
 }

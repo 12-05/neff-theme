@@ -963,6 +963,11 @@ footer {
     position: absolute;
     grid-template-columns: 1fr;
   }
+  @media (max-width: 768px) {
+    .profilbild {
+      background-position: top center !important;
+    }
+  }
   .profil {
     display: flex;
     flex-direction: column;
