@@ -2,7 +2,7 @@
 body{padding:0;margin:0;color:#000;font-family:"Helvetica Neue","Arial","sans-serif"}
 body main{font-size:20px;font-weight:400;line-height:1.5}
 .page-wrapper{max-width:1024px;margin:0 auto;padding:100px 25px;padding-top:300px}
-.header{pointer-events:none;position:absolute;top:0;left:0;right:0;z-index:98;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:100px}
+.header{pointer-events:none;position:absfolute;top:0;left:0;right:0;z-index:98;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:100px}
 .header .logo{pointer-events:all}
 .header .logo img{height:120px}
 .header .hamburger-container{pointer-events:all;height:50px;right:50px;width:50px;z-index:100;color:transparent;position:fixed;cursor:pointer;background:currentColor;border:10px solid currentColor;border-radius:3px}
@@ -329,6 +329,7 @@ footer .footer-menu ul li{margin:.3rem 0;text-align:center}
 .single-projekt .template .content .row .label{width:auto}
 .single-ansprechpartner .template{position:absolute;grid-template-columns:1fr}
 .single-ansprechpartner .template .profil{padding:5vw}
+.single-ansprechpartner .template .profil .profilbild{background-position:top center !important}
 .single-ansprechpartner .template .profil .name{font-size:28px;line-height:34px}
 .single-ansprechpartner .template .content{padding:50px 5vw}
 .single-ansprechpartner .template .content .subline{font-size:18px}

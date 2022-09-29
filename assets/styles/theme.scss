@@ -97,7 +97,7 @@ body {
 // Header
 .header {
   pointer-events: none;
-  position: absolute;
+  position: absfolute;
   top: 0;
   left: 0;
   right: 0;
@@ -974,6 +974,11 @@ footer {
       background-size: cover;
       background-position: center;
       margin-bottom: 50px;
+    }
+    .profilbild {
+      @media (max-width: $mobile) {
+        background-position: top center !important;
+      }
     }
     .name {
       @include fontBig;
