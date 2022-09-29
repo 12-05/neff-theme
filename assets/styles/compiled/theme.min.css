@@ -298,6 +298,7 @@ footer .footer-menu ul li{margin:.3rem 0;text-align:center}
 .block-grid .content .headline{font-size:20px}
 .block-ansprechpartner{padding:50px 5vw}
 .block-ansprechpartner h2{font-size:28px;line-height:34px}
+.block-ansprechpartner h2{font-size:20px;line-height:28px}
 .block-ansprechpartner .grid{grid-template-columns:1fr}
 .block-ansprechpartner .grid .item{margin-bottom:2rem}
 .block-ansprechpartner .grid .item .content .unternehmen{font-size:16px}

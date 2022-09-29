@@ -619,6 +619,10 @@ footer {
     color: $red;
     text-transform: uppercase;
     @include fontBig;
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      line-height: 28px;
+    }
     font-weight: normal;
   }
   .grid {
