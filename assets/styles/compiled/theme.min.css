@@ -327,9 +327,9 @@ footer .footer-menu ul li{margin:.3rem 0;text-align:center}
 .single-projekt .template .content{padding:50px 5vw}
 .single-projekt .template .content .headline{font-size:28px;line-height:34px}
 .single-projekt .template .content .row .label{width:auto}
+.single-ansprechpartner .template .profilbild{background-position:top center !important}
 .single-ansprechpartner .template{position:absolute;grid-template-columns:1fr}
 .single-ansprechpartner .template .profil{padding:5vw}
-.single-ansprechpartner .template .profil .profilbild{background-position:top center !important}
 .single-ansprechpartner .template .profil .name{font-size:28px;line-height:34px}
 .single-ansprechpartner .template .content{padding:50px 5vw}
 .single-ansprechpartner .template .content .subline{font-size:18px}

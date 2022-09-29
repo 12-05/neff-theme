@@ -951,7 +951,11 @@ footer {
   top: 0;
   left: 0;
   z-index: 500;
-
+  .profilbild {
+    @media (max-width: $mobile) {
+      background-position: top center !important;
+    }
+  }
   overflow-y: scroll;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -975,11 +979,7 @@ footer {
       background-position: center;
       margin-bottom: 50px;
     }
-    .profilbild {
-      @media (max-width: $mobile) {
-        background-position: top center !important;
-      }
-    }
+
     .name {
       @include fontBig;
     }
