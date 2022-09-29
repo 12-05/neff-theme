@@ -278,6 +278,12 @@ a {
   background-size: cover;
 }
 
+@media (max-width: 768px) {
+  .profilbild {
+    background-position: top center !important;
+  }
+}
+
 .hashtags {
   font-size: 1.2rem;
   font-weight: bold;
