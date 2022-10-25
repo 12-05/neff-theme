@@ -77,11 +77,8 @@
                 'meta_compare'	=> '>=',
 	            'meta_value'		=> $today,
             ));
-            function sortFunction( $a, $b ) {
-                return strtotime(get_field('event_start', $a->ID)) - strtotime(get_field('event_start', $b->ID));
-            }
-            usort($events, "sortFunction");
-            return $events; return $events;
+      
+            return $events; 
         }
 
         public static function get_past() {
