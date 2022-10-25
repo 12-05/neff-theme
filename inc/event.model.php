@@ -70,7 +70,7 @@
             $events = get_posts(array(
                 'post_type'		=> 'event',
                 'posts_per_page'	=> -1,
-                'orderby' => 'meta_value_num',
+                'orderby' => 'meta_value',
                 'order' => 'ASC',
                 'meta_key'		=> 'event_start',
                 'meta_compare'	=> '>=',
@@ -84,7 +84,7 @@
             $events = get_posts(array(
                 'post_type'		=> 'event',
                 'posts_per_page'	=> -1,
-                'orderby' => 'meta_value_num',
+                'orderby' => 'meta_value',
                 'order' => 'ASC',
                 'meta_key'		=> 'event_start',
                 'meta_compare'	=> '<',
