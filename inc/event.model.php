@@ -109,6 +109,7 @@
             }
         public static function format_date($date) {
             $date = new DateTime($date);
+            if(!$date) return "";
             return $date->format('d.m.Y');
 
         }
