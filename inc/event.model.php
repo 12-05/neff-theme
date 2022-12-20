@@ -98,15 +98,17 @@
                 'meta_compare'	=> '<',
 	            'meta_value'		=> $today,
             ));
-            if(is_array($events)) {
+            if(is_array($events)) {#
+                try {
                 function sortFunction( $a, $b ) {
-                    if(get_field('event_start', $b->ID) && get_field('event_start', $a->ID)) {
-                        return gmdate(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
-                    } else {
-                        return -1;
-                    }
+                    return gmdate(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
+               
                 }
                 usort($events, "sortFunction");
+                } catch (Exception $e) {
+                    error_log('fehler beim sortieren');
+                }
+            
             }
 
             return $events;
