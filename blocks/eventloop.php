@@ -15,3 +15,14 @@
     ?>
 </section>
 <?php $events2 = NEFF_EventModel::get_past();?>
+<?php if($events2) {?>
+    <h2 class="event-headline">Vergangene Veranstaltungen</h2>
+
+<?php } ?>
+<section class="block block-eventloop">
+    <?php 
+        if($events2):foreach($events2 as $eventPast):?>
+       
+        <?php endforeach;endif;
+    ?>
+</section>
