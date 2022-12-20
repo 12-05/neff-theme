@@ -98,7 +98,7 @@
                 'meta_compare'	=> '<',
 	            'meta_value'		=> $today,
             ));
-            if($events) {
+            if(is_array($events)) {
                 function sortFunction( $a, $b ) {
                     return strtotime(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
                 }
