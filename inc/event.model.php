@@ -101,7 +101,7 @@
             if(is_array($events)) {#
                 try {
                 function sortFunction( $a, $b ) {
-                    return strtotime(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
+                    return -1;
                
                 }
                 usort($events, "sortFunction");
