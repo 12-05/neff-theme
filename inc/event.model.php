@@ -99,7 +99,13 @@
 	            'meta_value'		=> $today,
             ));
             error_log(print_r($events,true));
-              
+                function sortFunction( $a, $b ) {
+                    return gmdate(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
+               
+                }
+                usort($events, "sortFunction");
+             
+            
 
             return $events;
         }
