@@ -98,18 +98,8 @@
                 'meta_compare'	=> '<',
 	            'meta_value'		=> $today,
             ));
-            if(is_array($events)) {#
-                try {
-                function sortFunction( $a, $b ) {
-                    return -1;
-               
-                }
-                usort($events, "sortFunction");
-                } catch (Exception $e) {
-                    error_log('fehler beim sortieren');
-                }
-            
-            }
+            error_log(print_r($events,true));
+              
 
             return $events;
         }
