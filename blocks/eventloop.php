@@ -21,8 +21,16 @@
 <?php } ?>
 <section class="block block-eventloop">
     <?php 
-        if($events2):foreach($events2 as $eventPast):?>
-       
+        if(is_array($events2)):foreach($events2 as $eventPast):?>
+        <a href="<?php echo get_permalink($eventPast->ID);?>" class="event">
+            <div class="bild" style="background-image:url(<?php echo get_field('bild', $eventPast->ID);?>"></div>
+            <div class="content">
+                <div class="subline"><?php  the_field('typ', $eventPast->ID);?><span class="datum"><?php echo NEFF_EventModel::format_date(get_field('event_start', $eventPast->ID));?></span></div>
+                <div class="headline"><?php echo $eventPast->post_title;?></div>
+                <div class="description"><?php the_field('kurzbeschreibung', $event->ID);?></div>
+                <span class="link"></span>
+            </div>
+        </a>
         <?php endforeach;endif;
     ?>
 </section>
