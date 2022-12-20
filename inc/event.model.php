@@ -98,7 +98,17 @@
                 'meta_compare'	=> '<',
 	            'meta_value'		=> $today,
             ));
-         
+            if(is_array($events)) {
+                function sortFunction( $a, $b ) {
+                    if(get_field('event_start', $b->ID) && get_field('event_start', $a->ID)) {
+                        return gmdate(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
+                    } else {
+                        return -1;
+                    }
+                }
+                usort($events, "sortFunction");
+            }
+
             return $events;
         }
         public static function get_apartner() {
