@@ -719,6 +719,10 @@ footer {
       color: #fff;
     }
   }
+  .inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
   .subline {
     color: $red;
