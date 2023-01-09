@@ -195,6 +195,16 @@
                 'icon'              => 'play',
                 'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
             ));   
+
+            acf_register_block_type(array(
+                'name'              => 'youtube',
+                'title'             => __('Youtube'),
+                'render_template'   => '/blocks/youtube.php',
+                'category'          => 'neff-blocks',
+                'align' => 'full',
+                'icon'              => 'play',
+                'enqueue_style'     => get_stylesheet_directory_uri().'/assets/styles/extended.css'
+            ));   
            
 
         }
