@@ -173,7 +173,7 @@ a {
 
 #hamburger.backdrop {
   z-index: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
   height: 40px;
   border-radius: 0px;
 }
