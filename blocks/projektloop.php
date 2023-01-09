@@ -10,7 +10,7 @@
         if($projekte):foreach($projekte as $projekt):?>
 
 
-        <a href="<?php echo get_field('externer_link', $projekt->ID) ? get_field('externer_link', $projekt->ID):get_permalink($projekt->ID);?>"class="projekt">
+        <a target="_blank" href="<?php echo get_field('externer_link', $projekt->ID) ? get_field('externer_link', $projekt->ID):get_permalink($projekt->ID);?>"class="projekt">
             <div class="bild" style="background-image:url(<?php echo get_field('bild', $projekt->ID);?>"></div>
             <div class="content">
                 <div style="color:<?php echo getProjectColor($projekt->ID);?>" class="subline">Projekt</div>
