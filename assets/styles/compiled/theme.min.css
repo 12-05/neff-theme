@@ -189,6 +189,8 @@ footer .footer-menu ul li a:hover{text-decoration:underline}
 .block-kontaktformular input[type="submit"]:hover{-webkit-transition:all .3s ease;transition:all .3s ease}
 .block-kontaktformular input[type="submit"]:hover{-webkit-box-shadow:none;box-shadow:none;-webkit-transform:translateY(2px);transform:translateY(2px)}
 .block-kontaktformular .grid{display:grid;grid-template-columns:2fr 1fr}
+.block-kontaktformular.kontakt-bg .subline{color:#fff}
+.block-kontaktformular.kontakt-bg .headline{color:"#FFF"}
 .fullscreen{position:absolute;top:0;left:0;width:100%;min-height:100vh;z-index:98;background:#eee}
 .fullscreen .close{cursor:pointer;-webkit-transition:all .3s ease;transition:all .3s ease;position:fixed;top:100px;right:100px;height:50px;width:50px}
 .fullscreen .close:hover{-webkit-transition:all .3s ease;transition:all .3s ease}

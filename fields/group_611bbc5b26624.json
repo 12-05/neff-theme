@@ -61,6 +61,23 @@
             "multiple": 0,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_63bc05b37d597",
+            "label": "Hintergrundfarbe",
+            "name": "hintergrundfarbe",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
         }
     ],
     "location": [
@@ -80,5 +97,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632139398
+    "show_in_rest": 0,
+    "modified": 1673266632
 }

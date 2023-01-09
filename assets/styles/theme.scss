@@ -1266,6 +1266,7 @@ footer {
   .subline {
     text-transform: uppercase;
   }
+
   .headline {
     margin: 0;
     @include fontBig;
@@ -1303,6 +1304,14 @@ footer {
     grid-template-columns: 2fr 1fr;
     @media (max-width: $mobile) {
       grid-template-columns: 1fr;
+    }
+  }
+  &.kontakt-bg {
+    .subline {
+      color: #fff;
+    }
+    .headline {
+      color: "#FFF";
     }
   }
 }
