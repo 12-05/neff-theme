@@ -27,7 +27,7 @@
             <div class="content">
                 <div class="subline"><?php  the_field('typ', $eventPast->ID);?><span class="datum"><?php echo NEFF_EventModel::format_date(get_field('event_start', $eventPast->ID));?></span></div>
                 <div class="headline"><?php echo $eventPast->post_title;?></div>
-                <div class="description"><?php the_field('kurzbeschreibung', $event->ID);?></div>
+                <div class="description"><?php the_field('kurzbeschreibung', $eventPast->ID);?></div>
                 <span class="link"></span>
             </div>
         </a>
