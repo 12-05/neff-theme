@@ -75,8 +75,8 @@
 	        'meta_value'		=> $today,
             ));
             function sortFunction($a,$b) {
-                $event_a_start = DateTime::createFromFormat('d.m.Y', get_field('event_start', $a->ID))->getTimestamp();
-                $event_b_start = DateTime::createFromFormat('d.m.Y', get_field('event_start', $b->ID))->getTimestamp();
+                $event_a_start = DateTime::createFromFormat('Ymd', get_field('event_start', $a->ID))->getTimestamp();
+                $event_b_start = DateTime::createFromFormat('Ymd', get_field('event_start', $b->ID))->getTimestamp();
                 return $event_a_start - $event_b_start;
             }
             usort($events, 'sortFunction');
@@ -94,8 +94,8 @@
 	            'meta_value'		=> $today,
             ));
             function sortFunction2($a,$b) {
-                $event_a_start = DateTime::createFromFormat('d.m.Y', get_field('event_start', $a->ID))->getTimestamp();
-                $event_b_start = DateTime::createFromFormat('d.m.Y', get_field('event_start', $b->ID))->getTimestamp();
+                $event_a_start = DateTime::createFromFormat('Ymd', get_field('event_start', $a->ID))->getTimestamp();
+                $event_b_start = DateTime::createFromFormat('Ymd', get_field('event_start', $b->ID))->getTimestamp();
                 return $event_b_start - $event_a_start;
             }
             usort($events, "sortFunction2");
