@@ -77,6 +77,9 @@
                 'meta_compare'	=> '>=',
 	            'meta_value'		=> $today,
             ));
+            function sortFunction($a,$b) {
+                return gmdate(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
+            }
             usort($events, 'sortFunction');
             return $events; 
         }
@@ -92,7 +95,10 @@
                 'meta_compare'	=> '<',
 	            'meta_value'		=> $today,
             ));
-            usort($events, "sortFunction");
+            function sortFunction2($a,$b) {
+                return gmdate(get_field('event_start', $a->ID)) - strtotime(get_field('event_start', $b->ID));
+            }
+            usort($events, "sortFunction2");
             return $events;
         }
         public static function get_apartner() {
@@ -133,6 +139,3 @@
 
 
 
-    function sortFunction($a,$b) {
-        return gmdate(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
-    }
