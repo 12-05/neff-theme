@@ -71,14 +71,11 @@
                 'post_type'		=> 'event',
                 'posts_per_page'	=> -1,
                 'meta_key'		=> 'event_start',
-                'orderby' => 'meta_value_num',
-                'order' => 'ASC',
-                'meta_key'		=> 'event_start',
                 'meta_compare'	=> '>=',
-	            'meta_value'		=> $today,
+	        'meta_value'		=> $today,
             ));
             function sortFunction($a,$b) {
-                return gmdate(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
+                return strtotime(get_field('event_start', $b->ID)) - strtotime(get_field('event_start', $a->ID));
             }
             usort($events, 'sortFunction');
             return $events; 
@@ -90,13 +87,12 @@
                 'post_type'		=> 'event',
                 'posts_per_page'	=> -1,
                 'meta_key'		=> 'event_start',
-                'orderby' => 'meta_value_num',
-                'order' => 'ASC',
+            
                 'meta_compare'	=> '<',
 	            'meta_value'		=> $today,
             ));
             function sortFunction2($a,$b) {
-                return gmdate(get_field('event_start', $a->ID)) - strtotime(get_field('event_start', $b->ID));
+                return strtotime(get_field('event_start', $a->ID)) - strtotime(get_field('event_start', $b->ID));
             }
             usort($events, "sortFunction2");
             return $events;
