@@ -238,6 +238,7 @@ button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:trans
 .block-intro .content .headline{font-size:42px}
 .block-intro .content .subline{font-size:20px}
 .block-intro .content .text{font-size:18px}
+.block-grid{grid-template-columns:1fr 1fr}
 .block-grid .content .subline{font-size:20px}
 .block-grid .content .headline{font-size:26px}
 .block-ansprechpartner h2{font-size:42px}
@@ -251,6 +252,7 @@ button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:trans
 .block-logowall h2{font-size:20px}
 .block-logowall .logo-grid{grid-template-columns:repeat(3,1fr)}
 .block-projektloop .projekt .headline{font-size:26px}
+.block-eventloop{grid-template-columns:1fr 1fr}
 .block-eventloop .event .headline{font-size:26px}
 .block-icons h2{font-size:26px}
 .block-icons .grid{grid-template-columns:repeat(3,1fr)}

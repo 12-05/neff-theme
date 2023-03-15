@@ -558,6 +558,9 @@ footer {
   @include contentPadding;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5vw;
+  @media (max-width: $mid) {
+    grid-template-columns: 1fr 1fr;
+  }
   @media (max-width: $mobile) {
     grid-template-columns: 1fr;
   }
@@ -820,6 +823,9 @@ footer {
 
 .block-eventloop {
   grid-template-columns: repeat(3, 1fr);
+  @media (max-width: $mid) {
+    grid-template-columns: 1fr 1fr;
+  }
   display: grid;
   @include contentPadding;
   padding-top: 0;
