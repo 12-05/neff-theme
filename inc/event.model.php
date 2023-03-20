@@ -74,13 +74,17 @@
                 'meta_compare'	=> '>=',
 	        'meta_value'		=> $today,
             ));
-            function sortFunction($a,$b) {
-                $event_a_start = DateTime::createFromFormat('Ymd', get_field('event_start', $a->ID))->getTimestamp();
-                $event_b_start = DateTime::createFromFormat('Ymd', get_field('event_start', $b->ID))->getTimestamp();
-                return $event_a_start - $event_b_start;
-            }
-            usort($events, 'sortFunction');
+           
+            usort($events, array('NEFF_EventModel', 'sortFunction'));
             return $events; 
+        }
+
+        public static function sortFunction($a,$b) {
+          
+
+            $event_a_start = DateTime::createFromFormat('Ymd', get_field('event_start', $a->ID))->getTimestamp();
+            $event_b_start = DateTime::createFromFormat('Ymd', get_field('event_start', $b->ID))->getTimestamp();
+            return $event_a_start - $event_b_start;
         }
 
         public static function get_past() {
@@ -93,14 +97,17 @@
                 'meta_compare'	=> '<',
 	            'meta_value'		=> $today,
             ));
-            function sortFunction2($a,$b) {
-                $event_a_start = DateTime::createFromFormat('Ymd', get_field('event_start', $a->ID))->getTimestamp();
-                $event_b_start = DateTime::createFromFormat('Ymd', get_field('event_start', $b->ID))->getTimestamp();
-                return $event_b_start - $event_a_start;
-            }
-            usort($events, "sortFunction2");
+        
+            usort($events, array('NEFF_EventModel', 'sortFunction2'));
             return $events;
         }
+
+        public static function sortFunction2($a,$b) {
+            $event_a_start = DateTime::createFromFormat('Ymd', get_field('event_start', $a->ID))->getTimestamp();
+            $event_b_start = DateTime::createFromFormat('Ymd', get_field('event_start', $b->ID))->getTimestamp();
+            return $event_b_start - $event_a_start;
+        }
+
         public static function get_apartner() {
          
                 $apartners = get_posts(array(
