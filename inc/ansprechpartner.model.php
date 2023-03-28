@@ -232,6 +232,8 @@
         }
 
         public static function get_vcard() {
+            $org = get_field('unternehmen') ? get_field('unternehmen'):get_field('org','option');
+            $domain = get_field('domain') ? get_field('domain'):get_field('website','option');
             $vcard = 
 'BEGIN:VCARD
 VERSION:3.0 
@@ -240,8 +242,8 @@ FN:'.get_the_title().'
 TEL;WORK;VOICE:'.get_field('telefon').'
 EMAIL;WORK:'.get_field('email').'
 ADR;TYPE=WORK:;;'.get_field('street','option').';'.get_field('city','option').';'.get_field('bundesland','option').';'.get_field('zip','option').';Deutschland;;
-ORG:'.get_field('org','option').'
-URL;type=WORK:'.get_field('website','option').'
+ORG:'.$org.'
+URL;type=WORK:'.$domain.'
 END:VCARD';
              $vcard_file = 'neue-effizienz-'.str_replace(' ', '-', get_the_title()).'.vcf';                     
             echo '<a href="data:text/vcard;charset=utf-8,'.rawurlencode($vcard).'" download="'.$vcard_file.'" class="download-button">';
