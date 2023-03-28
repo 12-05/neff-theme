@@ -63,7 +63,7 @@
         }
 
         public static function get_vcard() {
-            
+            if(!is_user_logged_in())return;
             $vcard = 
              'BEGIN:VCARD
              VERSION:3.0 
