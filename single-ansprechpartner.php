@@ -28,9 +28,11 @@
                 <div class="row">
                     <span class="label" style="width:100px">E-Mail:</span> <a  style="color:#666" href="mailto:<?php the_field('email');?>"><?php the_field('email');?> </a>
                 </div>
+                <?php if(get_field('vcard_activ', 'option')) { ?>
                 <div class="row">
                     <span class="label" style="width:100px">V-Card:</span> <?php NEFF_AnsprechpartnerModel::get_vcard();?>
                 </div>
+                <?php } ?>
                 
             </div>
             <div class="hashtags">
@@ -72,6 +74,11 @@
                 <div class="row">
                     <span class="label">E-Mail:</span> <?php the_field('email');?> </a>
                 </div>
+                <?php if(get_field('vcard_activ', 'option')) { ?>
+                <div class="row">
+                    <span class="label" style="width:100px">V-Card:</span> <?php NEFF_AnsprechpartnerModel::get_vcard();?>
+                </div>
+                <?php } ?>
                 <?php if(get_field('domain')) {?>
                     <div class="row">
                         <span class="label">Website:</span> <a href="<?php the_field('domain');?>" target="_blank"><?php the_field('domain');?></a>

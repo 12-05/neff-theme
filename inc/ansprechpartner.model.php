@@ -2,6 +2,8 @@
     class NEFF_AnsprechpartnerModel {
         public function __construct() {
             add_action('init',  array($this, 'register_post_type'));
+            add_action('acf/init',  array($this, 'register_fields'));
+
         }
 
         public function register_post_type() {
@@ -59,7 +61,174 @@
         }
 
         public function register_fields() {
-     
+            if( function_exists('acf_add_local_field_group') ):
+
+                acf_add_local_field_group(array(
+                    'key' => 'group_6422a6e908de0',
+                    'title' => 'VCard Optionen',
+                    'fields' => array(
+                        array(
+                            'key' => 'field_6422a6e9a4bc0',
+                            'label' => 'VCards Aktiv',
+                            'name' => 'vcard_active',
+                            'aria-label' => '',
+                            'type' => 'true_false',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'message' => '',
+                            'default_value' => 0,
+                            'ui' => 0,
+                            'ui_on_text' => '',
+                            'ui_off_text' => '',
+                        ),
+                        array(
+                            'key' => 'field_6422a70da4bc1',
+                            'label' => 'Firmierung',
+                            'name' => 'org',
+                            'aria-label' => '',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'maxlength' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                        ),
+                        array(
+                            'key' => 'field_6422a715a4bc2',
+                            'label' => 'Straße und Nr',
+                            'name' => 'street',
+                            'aria-label' => '',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'maxlength' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                        ),
+                        array(
+                            'key' => 'field_6422a71da4bc3',
+                            'label' => 'Postleitzahl',
+                            'name' => 'zip',
+                            'aria-label' => '',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'maxlength' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                        ),
+                        array(
+                            'key' => 'field_6422a727a4bc4',
+                            'label' => 'Stadt',
+                            'name' => 'city',
+                            'aria-label' => '',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'maxlength' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                        ),
+                        array(
+                            'key' => 'field_6422a731a4bc5',
+                            'label' => 'Bundesland',
+                            'name' => 'bundesland',
+                            'aria-label' => '',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'maxlength' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                        ),
+                        array(
+                            'key' => 'field_6422a737a4bc6',
+                            'label' => 'Website',
+                            'name' => 'website',
+                            'aria-label' => '',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'maxlength' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                        ),
+                    ),
+                    'location' => array(
+                        array(
+                            array(
+                                'param' => 'options_page',
+                                'operator' => '==',
+                                'value' => 'neff-settings',
+                            ),
+                        ),
+                    ),
+                    'menu_order' => 0,
+                    'position' => 'normal',
+                    'style' => 'default',
+                    'label_placement' => 'top',
+                    'instruction_placement' => 'label',
+                    'hide_on_screen' => '',
+                    'active' => true,
+                    'description' => '',
+                    'show_in_rest' => 0,
+                ));
+                
+                endif;		
         }
 
         public static function get_vcard() {
