@@ -234,7 +234,8 @@
         public static function get_vcard() {
             $org = get_field('unternehmen') ? get_field('unternehmen'):get_field('org','option');
             $domain = get_field('domain') ? get_field('domain'):get_field('website','option');
-            $adress = !get_field('unternehmen') ? 'ADR;TYPE=WORK:;;'.get_field('street','option').';'.get_field('city','option').';'.get_field('bundesland','option').';'.get_field('zip','option').';Deutschland;;':"";
+            $adress = !get_field('unternehmen') ? '
+ADR;TYPE=WORK:;;'.get_field('street','option').';'.get_field('city','option').';'.get_field('bundesland','option').';'.get_field('zip','option').';Deutschland;;':"";
             $vcard = 
 'BEGIN:VCARD
 VERSION:3.0 
