@@ -70,9 +70,9 @@ N:'.get_the_title().';;;
 FN:'.get_the_title().'
 TEL;WORK;VOICE:'.get_field('telefon').'
 EMAIL;WORK:'.get_field('email').'
-ADR;TYPE=WORK:;;Bärenstraße 11-13;Wuppertal;NRW;42117;Deutschland;;
-ORG:Neue Effizienz gemeinnützige GmbH
-URL;type=WORK:https://neue-effizienz.de
+ADR;TYPE=WORK:;;'.get_field('street','option').';'.get_field('city','option').';'.get_field('bundesland','option').';'.get_field('zip','option').';Deutschland;;
+ORG:'.get_field('org','option').'
+URL;type=WORK:'.get_field('website','option').'
 END:VCARD';
              $vcard_file = 'neue-effizienz-'.str_replace(' ', '-', get_the_title()).'.vcf';                     
             echo '<a href="data:text/vcard;charset=utf-8,'.rawurlencode($vcard).'" download="'.$vcard_file.'" class="download-button">';
