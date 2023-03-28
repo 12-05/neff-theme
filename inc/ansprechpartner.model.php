@@ -59,7 +59,28 @@
         }
 
         public function register_fields() {
+     
+        }
 
+        public static function get_vcard() {
+            echo '<a href="javascript:window.print()" class="print-button">';
+            echo '<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#666" d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg></span>';
+            echo '</a>';
+            $vcard = 
+             'BEGIN:VCARD
+             VERSION:3.0 
+             N:'.get_the_title().';;;
+             FN:'.get_the_title().'
+             TEL;WORK;VOICE:'.get_field('telefon').'
+             EMAIL;WORK:'.get_field('email').'
+             ADR;CHARSET=UTF-8;TYPE=WORK:;;Bärenstraße 11-13;Wuppertal;NRW;42117;Deutschland;;
+             ORG;CHARSET=UTF-8:Neue Effizienz gemeinnützige GmbH
+             URL;CHARSET=UTF-8;type=WORK:https://neue-effizienz.de
+             END:VCARD';
+             $vcard_file = 'neue-effizienz-'.get_the_title().'.vcf';                     
+            echo '<a href="data:text/vcard;charset=utf-8,'.rawurlencode($vcard).'" download="'.$vcard_file.'" class="download-button">';
+            echo '<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#FFF" d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></span>';
+            echo '</a>';
         }
 
     }
