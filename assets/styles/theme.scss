@@ -776,6 +776,23 @@ footer {
   }
 }
 
+.caption {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: normal;
+  font-size: 12px;
+  padding: 0.25rem 0.5rem;
+  z-index: 9999;
+}
+
+.align-image_left .caption {
+  left: 1rem;
+  right: auto;
+}
+
 .block-projektloop {
   grid-template-columns: repeat(3, 1fr);
   display: grid;
