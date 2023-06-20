@@ -231,6 +231,8 @@ button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:trans
 .block-ansprechpartner .grid .item .content .name,.ansprechpartner_slider .item .content .name{margin-top:1rem;color:var(--secondary);font-weight:normal;line-height:44px;font-size:31px;line-height:1;font-weight:400}
 .block-ansprechpartner .grid .item .content .position,.ansprechpartner_slider .position{margin-top:.5rem}
 .big_as .profilbild{background-size:cover}
+.block-blog-preview .grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-gap:2rem}
+.block-blog-preview .grid .block-text img{height:auto;max-width:100%}
 @media(max-width:1600px){body main{font-size:18px}
 .header .logo img{height:110px}
 .header .menu-wrapper ul li{font-size:20px}
@@ -273,6 +275,8 @@ button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:trans
 .block-kontaktformular input[type="submit"]{font-size:18px}
 .block-ansprechpartner .grid .item .content .unternehmen,.ansprechpartner_slider .unternehmen{font-size:18px}
 .block-ansprechpartner .grid .item .content .name,.ansprechpartner_slider .name{font-size:26px}
+.block-blog-preview .grid h3{font-size:2rem}
+.block-blog-preview .grid .block-blog-preview .grid{grid-template-columns:1fr 1fr 1fr}
 }@media(max-width:800px){body main{font-size:16px}
 .page-wrapper{padding-top:100px}
 .header{padding:25px}
@@ -387,5 +391,6 @@ button.slick-prev.slick-arrow{height:30px;width:30px}
 .block-ansprechpartner .grid .item .content .unternehmen,.ansprechpartner_slider .unternehmen{font-size:16px}
 .block-ansprechpartner .grid .item .content .name,.ansprechpartner_slider .name{font-size:20px}
 .block-ansprechpartner .grid .item .content .name,.ansprechpartner_slider .name{margin-top:.5rem}
+.block-blog-preview .grid .block-blog-preview .grid{grid-template-columns:1fr}
 }@media(max-width:768px){.single-ansprechpartner .template .profilbild{background-position:top center !important}
 }

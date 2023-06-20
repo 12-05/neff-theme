@@ -44,20 +44,6 @@ a {
   color: var(--secondary);
 }
 
-.block-blog-preview .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2rem;
-}
-.block-text img {
-  height: auto;
-  max-width: 100%;
-}
-@media (max-width: 800px) {
-  .block-blog-preview .grid {
-    grid-template-columns: 1fr;
-  }
-}
 .block-blog-preview .grid img {
   width: 100%;
   height: 100%;

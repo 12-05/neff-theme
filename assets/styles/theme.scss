@@ -1733,3 +1733,26 @@ button.slick-prev.slick-arrow {
     background-size: cover;
   }
 }
+
+.block-blog-preview .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  @media (max-width: $mid) {
+    h3 {
+      font-size: 2rem;
+    }
+    .block-blog-preview .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media (max-width: $mobile) {
+    .block-blog-preview .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .block-text img {
+    height: auto;
+    max-width: 100%;
+  }
+}
