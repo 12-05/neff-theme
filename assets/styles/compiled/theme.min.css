@@ -257,7 +257,7 @@ button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:trans
 .block-eventloop{grid-template-columns:1fr 1fr}
 .block-eventloop .event .headline{font-size:26px}
 .block-icons h2{font-size:26px}
-.block-icons .grid{grid-template-columns:repeat(3,1fr)}
+.block-icons .grid{grid-template-columns:repeat(2,1fr)}
 .block-icons .grid .item .content{font-size:18px}
 .single-projekt .template .content .headline{font-size:42px}
 .single-ansprechpartner .template .profil .name{font-size:42px}
