@@ -1740,16 +1740,12 @@ button.slick-prev.slick-arrow {
   grid-gap: 2rem;
   @media (max-width: $mid) {
     h3 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
-    .block-blog-preview .grid {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+    grid-template-columns: 1fr 1fr 1fr;
   }
   @media (max-width: $mobile) {
-    .block-blog-preview .grid {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
   }
   .block-text img {
     height: auto;
