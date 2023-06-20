@@ -232,6 +232,7 @@ button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:trans
 .block-ansprechpartner .grid .item .content .position,.ansprechpartner_slider .position{margin-top:.5rem}
 .big_as .profilbild{background-size:cover}
 .block-blog-preview .grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-gap:2rem}
+.block-blog-preview .grid h3{font-size:1.8rem}
 .block-blog-preview .grid .block-text img{height:auto;max-width:100%}
 @media(max-width:1600px){body main{font-size:18px}
 .header .logo img{height:110px}

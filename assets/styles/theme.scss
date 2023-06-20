@@ -1738,6 +1738,9 @@ button.slick-prev.slick-arrow {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
+  h3 {
+    font-size: 1.8rem;
+  }
   @media (max-width: $mid) {
     h3 {
       font-size: 1.5rem;
