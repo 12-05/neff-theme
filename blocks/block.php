@@ -3,7 +3,10 @@
 <?php $bild = wp_get_attachment_image_url(get_field('bild'), "large");?>
 <?php $caption = wp_get_attachment_caption(get_field('bild'));?>
     <div class="image">
-    <div class="caption"><?php echo $caption; ?></div>
+        <?php if ($caption) {?>
+            <div class="caption"><?php echo $caption; ?></div>
+
+        <?php }?>
 
         <img style="<?php if (get_field('contain')) {echo 'object-fit:contain;';}?>" src="<?php echo $bild; ?>" />
     </div>
