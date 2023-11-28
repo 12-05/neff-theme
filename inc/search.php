@@ -16,7 +16,7 @@
         background-color:transparent;
         border:0;
         margin:0;
-        background-image:url("<?php echo get_stylesheet_directory_uri(); ?>'/assets/images/Search.svg'");
+        background-image:url("<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Search.svg");
         background-size:contain;
         background-position:center;
 
