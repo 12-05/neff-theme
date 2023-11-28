@@ -234,6 +234,12 @@ button.slick-prev.slick-arrow{left:15px;position:absolute;background-color:trans
 .block-blog-preview .grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-gap:2rem}
 .block-blog-preview .grid h3{font-size:1.8rem}
 .block-blog-preview .grid .block-text img{height:auto;max-width:100%}
+.result-grid .post{text-decoration:none;color:var(--secondary);display:block;padding-bottom:2rem;border-bottom:1px solid #eee;padding:2rem}
+.result-grid .post:hover{background:#ebebeb}
+.result-grid .thumbnail img{width:300px;height:auto;height:300px;margin-right:1rem;-o-object-fit:cover;object-fit:cover;float:left}
+.result-grid .link{margin-top:1rem;height:5px;width:30px;background:var(--main);display:block;float:right;-webkit-transition:all .3s ease;transition:all .3s ease}
+.result-grid h2{margin:0;margin-bottom:1.5rem}
+.result-grid .post-type{text-transform:uppercase;color:var(--primary);font-weight:300}
 @media(max-width:1600px){body main{font-size:18px}
 .header .logo img{height:110px}
 .header .menu-wrapper ul li{font-size:20px}
