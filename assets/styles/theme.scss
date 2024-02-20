@@ -1806,6 +1806,8 @@ button.slick-prev.slick-arrow {
   .slick-dots {
     padding-top: 0px;
     margin-top: -5px;
+    position: relative;
+    z-index: 99999999;
   }
 
   .slide {
