@@ -39,6 +39,20 @@ class NEFF_Blocks
     {
         $styleuri = get_stylesheet_directory_uri() . '/assets/styles/compiled/theme.css';
         acf_register_block_type(array(
+            'name' => 'logoslider',
+            'title' => __('Logoslider'),
+            'render_template' => 'blocks/logoslider.php',
+            'category' => 'neff-blocks',
+            'icon' => 'image-flip-horizontal',
+            'align' => 'full',
+            'enqueue_style' => $styleuri,
+            'enqueue_assets' => function () {
+                wp_enqueue_style('neff-slider-css', get_template_directory_uri() . '/assets/styles/slick.css');
+                wp_enqueue_script('neff-slider-js', get_template_directory_uri() . '/assets/scripts/slick.js', array('jquery'), false, false);
+            },
+        ));
+
+        acf_register_block_type(array(
             'name' => 'slider',
             'title' => __('Slider'),
             'render_template' => 'blocks/slider.php',

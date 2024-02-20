@@ -1800,3 +1800,22 @@ button.slick-prev.slick-arrow {
     font-weight: 300;
   }
 }
+
+.block-logoslider {
+  height: 200px;
+  .slick-dots {
+    padding-top: 0px;
+    margin-top: -5px;
+  }
+  .slide {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    height: 100% !important;
+    align-items: center;
+    img {
+      max-width: 100%;
+      height: 85px;
+    }
+  }
+}
