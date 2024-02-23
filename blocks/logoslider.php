@@ -2,13 +2,13 @@
 <section class="block block-logoslider block-slider">
     <div class="logoslider-inner">
     <?php if ($slides): foreach ($slides as $slide): ?>
-																						            <a target="_blank" href="<?php echo $slide['link']; ?>"  class="slide">
-																						                <?php if ($slide['logo']) {?>
-																						                    <img style="<?php if ($slide['height']) {echo 'height:' . $slide['height'];}?>px;max-width:auto;" src="<?php echo $slide['logo']; ?>" />
-																						                <?php }?>
-																						            </a>
+																							            <a target="_blank" href="<?php echo $slide['link']; ?>"  class="slide">
+																							                <?php if ($slide['logo']) {?>
+																							                    <img style="<?php if ($slide['height']) {echo 'height:' . $slide['height'];}?>px;max-width:none;" src="<?php echo $slide['logo']; ?>" />
+																							                <?php }?>
+																							            </a>
 
-																				<?php endforeach;endif;?>
+																					<?php endforeach;endif;?>
                                                 </div>
                                                 <div style="clear:both;"></div>
                                             </section>
